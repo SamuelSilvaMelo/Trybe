@@ -4,10 +4,7 @@
 - Posicione o balão para que se torne uma fala de Bowser.
 - Posicione os elementos para que tenham alguma distância entre si.
   --> */
-body {
-  background-color: rgb(72, 58, 82);
-}
-
+  
 .super-mario {
   position: absolute;
   width: 200px;

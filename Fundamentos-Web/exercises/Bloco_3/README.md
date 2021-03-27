@@ -1,4 +1,4 @@
-## Unit 3: Introduction - HTML & CSS:
+## Unit 3: Introduction - HTML & CSS :heavy_check_mark:
 
 Here you will find the exercises related to the HTML pages stylized with the CSS performed according to the instructions and guidelines of each exercise.
 

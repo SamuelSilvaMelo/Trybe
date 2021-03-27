@@ -1,4 +1,4 @@
-# Introduction - Fundamentals of Web Development :heavy_check_mark:
+## Unit 3: Introduction - HTML & CSS:
 
 Here you will find the exercises related to the HTML pages stylized with the CSS performed according to the instructions and guidelines of each exercise.
 

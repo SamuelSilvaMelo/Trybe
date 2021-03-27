@@ -1,0 +1,39 @@
+h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+p {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+
+#unorderesList {
+    background-color: green;
+    font-style: italic;
+    line-height: 50px;
+    text-align:left;
+    text-decoration: underline;
+}
+
+.background {
+    background-color: rgb(20, 103, 180);
+}
+
+#yellow {
+    color: yellow;
+}
+
+#red {
+    color: red;
+}
+
+#brown {
+    color: brown;
+}

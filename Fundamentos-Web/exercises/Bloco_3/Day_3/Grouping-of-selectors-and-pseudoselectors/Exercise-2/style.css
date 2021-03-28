@@ -1,0 +1,37 @@
+div:hover {
+    border: solid #c66048;
+}
+
+#first-div {
+    background-color: #4C2A2A;
+    padding: 20px
+}
+
+#second-div {
+    background-color: #402A37;
+    padding: 20px;
+}
+
+#third-div {
+    background-color: #342B44;
+    padding: 30px;
+}
+
+#fourth-div {
+    background-color: #2C2B4D;
+    padding: 20px;
+}
+
+#fifth-div {
+    background-color: #2a2a4c;
+    padding: 20px;
+}
+
+h3 {
+    color: white;
+    font-family: monospace;
+}
+
+div#first-div, div#third-div, div#fifth-div {
+    font-style: italic;
+}

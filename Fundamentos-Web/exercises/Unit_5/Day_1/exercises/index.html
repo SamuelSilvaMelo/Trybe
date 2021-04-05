@@ -58,7 +58,10 @@
       document.getElementsByClassName('title')[0].innerText = 'Exercício 5.1 - JavaScript';
       for (let index = 0; index < document.getElementsByTagName('p').length; index += 1) {
         document.getElementsByTagName('p')[index].style.textTransform = "uppercase";
-      } 
+      }
+      for (let index = 0; index < document.getElementsByTagName('p').length; index += 1) {
+        console.log(document.getElementsByTagName('p')[index].textContent);
+      }
     </script>
   </body>
 </html>

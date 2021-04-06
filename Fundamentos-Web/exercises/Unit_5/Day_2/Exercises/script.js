@@ -97,3 +97,7 @@ let centerRightContent = document.querySelector('.right-content');
 centerRightContent.style.marginRight = 'auto';
 
 
+// 5. Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+
+let changeBackgroundCenterContent = document.querySelector('.center-content').parentNode;
+changeBackgroundCenterContent.style.backgroundColor = 'green';

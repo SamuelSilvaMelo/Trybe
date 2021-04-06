@@ -63,3 +63,12 @@ for (let index = 0; index < arrayNumbers.length; index += 1) {
   list.appendChild(createItems);
 }
 
+// 9. Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+
+for (let index = 0; index < 3; index += 1) {
+  if (index < 3) {
+    let createH3 = document.createElement('h3');
+    createH3.className = 'tag-h3'
+    document.querySelector('.main-content').appendChild(createH3);
+  }
+}

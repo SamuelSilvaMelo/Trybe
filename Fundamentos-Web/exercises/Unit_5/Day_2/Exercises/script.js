@@ -19,3 +19,8 @@ let createDiv2 = document.createElement('div');
 createDiv2.className = 'center-content';
 document.querySelector('.main-content').appendChild(createDiv2);
 
+// 4. Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+
+let createParagraph = document.createElement('p');
+createParagraph.innerHTML = 'Aprendendo a trabalhar com elementos <strong>HTML</strong> com o <strong>JavaScript</strong>.';
+document.querySelector('.center-content').appendChild(createParagraph);

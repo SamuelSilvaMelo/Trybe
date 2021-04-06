@@ -72,3 +72,8 @@ for (let index = 0; index < 3; index += 1) {
     document.querySelector('.main-content').appendChild(createH3);
   }
 }
+
+// Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+// 1. Adicione a classe title na tag h1 criada;
+
+tituloH1.className = 'title';

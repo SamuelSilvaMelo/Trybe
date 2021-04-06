@@ -91,3 +91,9 @@ for (let index = 0; index < addDescriptionH3.length; index += 1) {
 let removeLeftContent = document.querySelector('.left-content');
 document.querySelector('.main-content').removeChild(removeLeftContent);
 
+// 4. Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
+
+let centerRightContent = document.querySelector('.right-content');
+centerRightContent.style.marginRight = 'auto';
+
+

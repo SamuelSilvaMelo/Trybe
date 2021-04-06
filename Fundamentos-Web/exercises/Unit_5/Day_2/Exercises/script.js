@@ -101,3 +101,12 @@ centerRightContent.style.marginRight = 'auto';
 
 let changeBackgroundCenterContent = document.querySelector('.center-content').parentNode;
 changeBackgroundCenterContent.style.backgroundColor = 'green';
+
+// 6. Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
+for (let index = 0; index < 2; index += 1) {
+  let lastChildNumbersList = document.querySelector('.numbers-list').lastChild;
+  if (index < 2) {
+    document.querySelector('.numbers-list').removeChild(lastChildNumbersList);
+  }
+}

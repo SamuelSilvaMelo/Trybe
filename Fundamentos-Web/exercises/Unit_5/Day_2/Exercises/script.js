@@ -24,3 +24,9 @@ document.querySelector('.main-content').appendChild(createDiv2);
 let createParagraph = document.createElement('p');
 createParagraph.innerHTML = 'Aprendendo a trabalhar com elementos <strong>HTML</strong> com o <strong>JavaScript</strong>.';
 document.querySelector('.center-content').appendChild(createParagraph);
+
+// 5. Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+
+let divLeftContent = document.createElement('div')
+divLeftContent.className = 'left-content';
+document.querySelector('.main-content').appendChild(divLeftContent);

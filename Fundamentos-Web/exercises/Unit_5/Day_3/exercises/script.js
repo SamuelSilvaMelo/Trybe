@@ -96,3 +96,21 @@ function createFriday(SextaFeira) {
 
 createFriday('Sexta-feira');
 
+// Exercício 5:
+
+function changeFridayText() {
+  let fridayList = document.querySelectorAll('.friday');
+  let saveFridays = ['4', '11', '18', '25']
+
+  for (let index = 0; index < fridayList.length; index += 1) {
+    if (fridayList[index].innerText !== 'SEXTOUU!') {
+      fridayList[index].innerText = 'SEXTOUU!';
+    } else {
+      fridayList[index].innerText = saveFridays[index];
+    }
+  }
+}
+
+let fridayButtom = document.getElementById('btn-friday');
+
+fridayButtom.addEventListener('click', changeFridayText);

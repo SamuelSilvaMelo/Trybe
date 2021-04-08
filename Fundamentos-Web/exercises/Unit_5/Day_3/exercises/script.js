@@ -80,3 +80,19 @@ let btnHoliday = document.getElementById('btn-holiday');
 
 btnHoliday.addEventListener('click', changeHolidayColor);
 
+// Exercício 4:
+
+function createFriday(SextaFeira) {
+
+  let buttonsContainer = document.querySelector('.buttons-container');
+  let createFridayButtom = document.createElement('button');
+  let fridayButtom = createFridayButtom;
+  fridayButtom.id = 'btn-friday';
+  fridayButtom.innerText = SextaFeira;
+
+  buttonsContainer.appendChild(fridayButtom);
+
+}
+
+createFriday('Sexta-feira');
+

@@ -41,3 +41,21 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
 
 };
 
+// Exercício 2:
+
+  let button = document.createElement('button');
+
+  button.id = 'btn-holiday'
+  button.innerText = 'Feriados'
+
+  let buttonsContainer = document.querySelector('.buttons-container')
+
+  buttonsContainer.appendChild(button)
+
+// function holidays(Feriados) {
+//   let button = document.createElement('button');
+//   button.id = 'btn-holiday'
+//   button.innerText = Feriados
+//   let buttonsContainer = document.querySelector('.buttons-container')
+//   buttonsContainer.appendChild(button)
+// }

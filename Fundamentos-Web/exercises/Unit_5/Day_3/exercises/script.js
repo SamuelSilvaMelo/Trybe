@@ -59,3 +59,24 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
 //   let buttonsContainer = document.querySelector('.buttons-container')
 //   buttonsContainer.appendChild(button)
 // }
+
+// Exercício 3:
+
+function changeHolidayColor() {
+  let holidays = document.querySelectorAll('.holiday');
+  let currentColor = document.querySelector('.holiday').style.backgroundColor;
+
+  for (let index = 0; index < holidays.length; index += 1) {
+    if (currentColor === 'rgb(196, 190, 190)') {
+    holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+  } else {
+    holidays[index].style.backgroundColor = 'rgb(196,190,190)';
+  }
+  
+  }
+}
+
+let btnHoliday = document.getElementById('btn-holiday');
+
+btnHoliday.addEventListener('click', changeHolidayColor);
+

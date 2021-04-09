@@ -194,3 +194,18 @@ myTasks.addEventListener('click', addTaskSelected)
 
 // 10.
 
+function monthDayColor(event) {
+
+  let currentClass = document.querySelector('.my-tasks').lastElementChild.classList[0];
+
+  if (currentClass === 'task-selected') {
+    event.target.style.color = 'green';
+  } else {
+    event.target.style.color = 'rgb(119,119,119)';
+  }
+
+};
+
+let daysContainer = document.querySelector('.days-container');
+daysContainer.addEventListener('click', monthDayColor);
+

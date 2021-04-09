@@ -114,3 +114,33 @@ function changeFridayText() {
 let fridayButtom = document.getElementById('btn-friday');
 
 fridayButtom.addEventListener('click', changeFridayText);
+
+// Exercício 6:
+function mouseOver() {
+
+  function changeStyle(event) {
+    event.target.style.fontSize = '30px'
+    event.target.style.fontWeight = '600'
+  }
+
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', changeStyle)
+};
+
+function mouseOut() {
+
+  function changeStyle(event) {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  }
+
+let days = document.querySelector('#days');
+
+days.addEventListener('mouseout', changeStyle);
+};
+
+
+mouseOver();
+mouseOut();
+

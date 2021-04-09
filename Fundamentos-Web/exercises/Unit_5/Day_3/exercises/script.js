@@ -144,3 +144,21 @@ days.addEventListener('mouseout', changeStyle);
 mouseOver();
 mouseOut();
 
+// 7. 
+
+function addTask(string) {
+  let taskImput = document.querySelector('#task-input');
+  string = taskImput.value
+
+  let createParagraph = document.createElement('p');
+  createParagraph.innerText = string
+
+  let myTasks = document.querySelector('.my-tasks');
+
+  myTasks.appendChild(createParagraph);
+}
+
+let btnButton = document.querySelector('#btn-add');
+btnButton.addEventListener('click', addTask);
+
+

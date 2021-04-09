@@ -161,4 +161,19 @@ function addTask(string) {
 let btnButton = document.querySelector('#btn-add');
 btnButton.addEventListener('click', addTask);
 
+// 8.
 
+function createColor(color) {
+  let legend = document.createElement('div');
+  legend.className = 'task'
+  legend.style.backgroundColor = color
+
+  let myTasks = document.querySelector('.my-tasks')
+  myTasks.appendChild(legend)
+}
+
+createColor('green');
+createColor('yellow');
+createColor('blue');
+
+// 9.

@@ -146,20 +146,16 @@ mouseOut();
 
 // 7. 
 
-function addTask(string) {
-  let taskImput = document.querySelector('#task-input');
-  string = taskImput.value
+function addTaskName(string) {
 
-  let createParagraph = document.createElement('p');
-  createParagraph.innerText = string
+  let spanTask = document.createElement('span');
+  spanTask.innerText = string;
 
-  let myTasks = document.querySelector('.my-tasks');
+  document.querySelector('.my-tasks').appendChild(spanTask);
 
-  myTasks.appendChild(createParagraph);
 }
 
-let btnButton = document.querySelector('#btn-add');
-btnButton.addEventListener('click', addTask);
+addTaskName('Tarefas: ');
 
 // 8.
 
@@ -209,3 +205,19 @@ function monthDayColor(event) {
 let daysContainer = document.querySelector('.days-container');
 daysContainer.addEventListener('click', monthDayColor);
 
+// BONUS:
+
+function addTask(string) {
+  let taskImput = document.querySelector('#task-input');
+  string = taskImput.value
+
+  let createParagraph = document.createElement('div');
+  createParagraph.innerText = string
+
+  let myTasks = document.querySelector('.input-container');
+
+  myTasks.appendChild(createParagraph);
+}
+
+let btnButton = document.querySelector('#btn-add');
+btnButton.addEventListener('click', addTask);

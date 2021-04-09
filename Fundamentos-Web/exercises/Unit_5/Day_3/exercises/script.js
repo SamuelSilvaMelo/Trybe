@@ -221,3 +221,4 @@ function addTask(string) {
 
 let btnButton = document.querySelector('#btn-add');
 btnButton.addEventListener('click', addTask);
+

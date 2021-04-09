@@ -174,6 +174,7 @@ function createColor(color) {
 
 createColor('green');
 
+
 // 9.
 
 let myTasks = document.querySelector('.task');
@@ -181,12 +182,15 @@ let myTasks = document.querySelector('.task');
 function addTaskSelected() {
 
   if (myTasks.className === 'task') {
-    myTasks.classList.add('task-selected');
+    myTasks.classList = 'task-selected';
   } else {
-    myTasks.classList.remove('task-selected');
+    myTasks.classList = 'task';
   }
 
 }
 
 myTasks.addEventListener('click', addTaskSelected)
+
+
+// 10.
 

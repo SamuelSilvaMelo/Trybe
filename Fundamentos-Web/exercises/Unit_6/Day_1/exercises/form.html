@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Currículo</h1>
+  <fieldset id="main-fieldset">
+    <form action="" method="GET" id="main-form">
+  <fieldset id="personal-information">
+    <h2>Informações Pessoais</h2>
+    <div class="label-definition">
+      <label for="name">Nome completo:</label>
+    </div>
+    <div class="input-definition">
+        <input type="text" id="name" name="name" maxlength="40" required placeholder="Digite seu nome completo">
+    </div>
+    <div class="label-definition">
+      <label for="email">E-mail:</label>
+    </div>
+    <div class="input-definition">
+        <input type="email" id="email" name="email" maxlength="50" required placeholder="Digite seu e-mail">
+    </div>
+    <div class="label-definition">
+      <label for="cpf">CPF:</label>
+    </div>
+    <div class="input-definition">
+        <input type="text" id="cpf" name="cpf" maxlength="11" required placeholder="Somente números">
+    </div>
+    <div class="label-definition">
+      <label for="address">Endereço:</label>
+    </div>
+    <div class="input-definition">
+        <input type="text" id="address" name="address" maxlength="200" required placeholder="Endereço">
+    </div>
+    <div class="label-definition">
+      <label for="city">Cidade:</label>
+    </div>
+    <div class="input-definition">
+        <input type="text" id="city" name="city" maxlength="28" required placeholder="Cidade">
+    </div>
+    <div class="label-definition">
+      <label for="states">Estado:</label>
+    </div>
+    <div class="select-definition">
+      <select name="states" id="states" required>
+      </select>
+    </div>
+    <div class="label-definition">
+      <label for="home-type">Moradia:</label>
+    </div>
+    <div class="input-definition">
+        <label for="home" class="home">
+          <input type="radio" name="home-type" id="home">Casa
+        </label>
+        <label for="apartment" class="apartment">
+          <input type="radio" name="home-type" id="apartment">Apartamento
+        </label>
+    </div>
+  </fieldset>
+  <fieldset id="professional-information">
+      <h2>Resumo do Currículo</h3>
+    <div class="label-definition">
+      <label for="resume">Resumo Profissional:</label>
+    </div>
+    <div class="textarea-definition">
+      <textarea name="resume" id="resume" cols="100" rows="10" maxlength="1000" placeholder="Digite o resumo da sua história profissional"></textarea>
+    </div>
+    <div class="label-definition">
+      <label for="office">Cargo:</label>
+    </div>
+    <div class="input-definition">
+        <input type="text" id="office" name="office" maxlength="40" required placeholder="Digite o cargo pretendido">
+    </div>
+    <div class="label-definition">
+      <label for="office-description">Descrição do cargo:</label>
+    </div>
+    <div class="input-definition">
+        <input type="text" id="office-description" name="office-description" maxlength="500" required placeholder="Digite a descrição do cargo pretendido">
+    </div>
+    <div class="label-definition">
+      <label for="start-date">Data de início:</label>
+    </div>
+    <div class="input-definition">
+        <input type="text" id="start-date" name="start-date" maxlength="10" required placeholder="dd/mm/aaaa">
+    </div>
+  </fieldset>
+  <div class="button">
+    <button type="submit">Enviar</button>
+  </div>
+</form>
+</fieldset>
+  <script src="script.js" ></script>
+</body>
+</html>

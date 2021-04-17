@@ -22,8 +22,8 @@ function changeBackgroundColor(event) {
     mainStyle.backgroundColor = 'brown';
   }
 
-  let backgroundValue = mainStyle.backgroundColor
-  localStorage.setItem('background', backgroundValue)
+  let backgroundValue = mainStyle.backgroundColor;
+  localStorage.setItem('background', backgroundValue);
 }
 
 personalizationButtons.addEventListener('click', changeBackgroundColor);
@@ -46,7 +46,9 @@ function changeTextColor(event) {
       paragraph[index].style.color = 'brown';
     }
   }
-  
+
+  let textColor = paragraph[0].style.color;
+  localStorage.setItem('textColor', textColor);
 }
 
 textColor.addEventListener('click', changeTextColor);

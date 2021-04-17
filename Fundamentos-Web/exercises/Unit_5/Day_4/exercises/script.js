@@ -4,6 +4,7 @@ const textColor = document.querySelector('.text-color');
 const paragraph = document.querySelectorAll('.paragraph');
 const fontSize = document.querySelector('.font-size');
 const lineHeight = document.querySelector('.line-height');
+const fontFamily = document.querySelector('.font-family');
 
 // Function to change the site backgroun color
 function changeBackgroundColor(event) {
@@ -78,3 +79,18 @@ function changeLineHeight(event) {
 }
 
 lineHeight.addEventListener('click', changeLineHeight);
+
+//function to change font-family
+function changeFontFamily(event) {
+  for (let index = 0; index < paragraph.length; index += 1) {
+    if (event.target.id === 'arial') {
+      paragraph[index].style.fontFamily = 'Arial';
+    } else if (event.target.id === 'times') {
+      paragraph[index].style.fontFamily = 'Times New Roman';
+    } else if (event.target.id === 'monoespace') {
+      paragraph[index].style.fontFamily = 'monospace';
+    }
+  }
+}
+
+fontFamily.addEventListener('click', changeFontFamily)

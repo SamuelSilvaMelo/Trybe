@@ -2,6 +2,7 @@ const personalizationButtons = document.querySelector('.personalization-buttons'
 const bodyStyle = document.querySelector('body').style;
 const textColor = document.querySelector('.text-color');
 const paragraph = document.querySelectorAll('.paragraph');
+const fontSize = document.querySelector('.font-size');
 
 // Function to change the site backgroun color
 function changeBackgroundColor(event) {
@@ -31,11 +32,11 @@ function changeTextColor(event) {
       paragraph[index].style.color = 'black';
     } if (event.target.id === 'text-white') {
       paragraph[index].style.color = 'white';
-    }else if (event.target.id === 'text-grey') {
+    } else if (event.target.id === 'text-grey') {
       paragraph[index].style.color = 'grey';
-    }else if (event.target.id === 'text-dark-blue') {
+    } else if (event.target.id === 'text-dark-blue') {
       paragraph[index].style.color = 'darkblue';
-    }else if (event.target.id === 'text-pink') {
+    } else if (event.target.id === 'text-pink') {
       paragraph[index].style.color = 'pink';
     } else if (event.target.id === 'text-brown') {
       paragraph[index].style.color = 'brown';
@@ -45,3 +46,20 @@ function changeTextColor(event) {
 }
 
 textColor.addEventListener('click', changeTextColor);
+
+
+//function to change the font size
+function changeFontSize(event) {
+  for (let index = 0; index < paragraph.length; index += 1){
+    if (event.target.id === 'small-size-font') {
+      paragraph[index].style.fontSize = 'small';
+    } else if (event.target.id === 'medium-size-font') {
+      paragraph[index].style.fontSize = 'medium';
+    } else if (event.target.id === 'large-size-font') {
+      paragraph[index].style.fontSize = 'large';
+    }
+  }
+}
+
+fontSize.addEventListener('click', changeFontSize);
+

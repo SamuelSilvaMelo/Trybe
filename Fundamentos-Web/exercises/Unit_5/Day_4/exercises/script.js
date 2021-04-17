@@ -98,9 +98,12 @@ function changeFontFamily(event) {
     } else if (event.target.id === 'times') {
       paragraph[index].style.fontFamily = 'Times New Roman';
     } else if (event.target.id === 'monoespace') {
-      paragraph[index].style.fontFamily = 'monospace';
+      paragraph[index].style.fontFamily = 'monoespace';
     }
   }
+
+  let fontFamily = paragraph[0].style.fontFamily;
+  localStorage.setItem('fontFamily', fontFamily);
 }
 
 fontFamily.addEventListener('click', changeFontFamily);

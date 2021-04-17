@@ -3,6 +3,7 @@ const bodyStyle = document.querySelector('body').style;
 const textColor = document.querySelector('.text-color');
 const paragraph = document.querySelectorAll('.paragraph');
 const fontSize = document.querySelector('.font-size');
+const lineHeight = document.querySelector('.line-height');
 
 // Function to change the site backgroun color
 function changeBackgroundColor(event) {
@@ -63,3 +64,17 @@ function changeFontSize(event) {
 
 fontSize.addEventListener('click', changeFontSize);
 
+//function to change line height 
+function changeLineHeight(event) {
+  for (let index = 0; index < paragraph.length; index += 1) {
+    if (event.target.id === 'small-line-height') {
+      paragraph[index].style.lineHeight = '15px';
+    } else if (event.target.id === 'medium-line-height') {
+      paragraph[index].style.lineHeight = '25px';
+    } else if (event.target.id === 'large-line-height') {
+      paragraph[index].style.lineHeight = '35px';
+    }
+  }
+}
+
+lineHeight.addEventListener('click', changeLineHeight);

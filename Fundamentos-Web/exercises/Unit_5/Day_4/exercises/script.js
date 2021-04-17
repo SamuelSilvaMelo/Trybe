@@ -107,3 +107,16 @@ function changeFontFamily(event) {
 }
 
 fontFamily.addEventListener('click', changeFontFamily);
+
+//Add search information saved in localStorage
+
+window.onload = function requestLocalStorageInfos() {
+  mainStyle.backgroundColor = localStorage.getItem('background');
+
+  for (let index = 0; index < paragraph.length; index += 1) {
+    paragraph[index].style.color = localStorage.getItem('textColor');
+    paragraph[index].style.fontSize = localStorage.getItem('fontSize');
+    paragraph[index].style.lineHeight = localStorage.getItem('lineHeight');
+    paragraph[index].style.fontFamily = localStorage.getItem('fontFamily');
+  }
+}

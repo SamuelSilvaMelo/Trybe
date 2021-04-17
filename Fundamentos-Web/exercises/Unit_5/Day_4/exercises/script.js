@@ -21,7 +21,9 @@ function changeBackgroundColor(event) {
   } else if (event.target.id === 'background-brown') {
     mainStyle.backgroundColor = 'brown';
   }
-  
+
+  let backgroundValue = mainStyle.backgroundColor
+  localStorage.setItem('background', backgroundValue)
 }
 
 personalizationButtons.addEventListener('click', changeBackgroundColor);
@@ -93,4 +95,4 @@ function changeFontFamily(event) {
   }
 }
 
-fontFamily.addEventListener('click', changeFontFamily)
+fontFamily.addEventListener('click', changeFontFamily);

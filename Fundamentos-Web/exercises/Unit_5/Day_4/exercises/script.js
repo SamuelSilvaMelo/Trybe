@@ -65,6 +65,9 @@ function changeFontSize(event) {
       paragraph[index].style.fontSize = 'large';
     }
   }
+
+  let fontSize = paragraph[0].style.fontSize;
+  localStorage.setItem('textColor', fontSize);
 }
 
 fontSize.addEventListener('click', changeFontSize);

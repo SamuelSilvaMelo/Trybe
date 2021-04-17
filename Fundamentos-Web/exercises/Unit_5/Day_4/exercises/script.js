@@ -1,5 +1,5 @@
 const personalizationButtons = document.querySelector('.personalization-buttons');
-const bodyStyle = document.querySelector('body').style;
+const mainStyle = document.querySelector('main').style;
 const textColor = document.querySelector('.text-color');
 const paragraph = document.querySelectorAll('.paragraph');
 const fontSize = document.querySelector('.font-size');
@@ -8,17 +8,17 @@ const lineHeight = document.querySelector('.line-height');
 // Function to change the site backgroun color
 function changeBackgroundColor(event) {
   if (event.target.id === 'background-black') {
-    bodyStyle.backgroundColor = 'black';
+    mainStyle.backgroundColor = 'black';
   } else if (event.target.id === 'background-white') {
-    bodyStyle.backgroundColor = 'white';
+    mainStyle.backgroundColor = 'white';
   }else if (event.target.id === 'background-grey') {
-    bodyStyle.backgroundColor = 'grey';
+    mainStyle.backgroundColor = 'grey';
   }else if (event.target.id === 'background-dark-blue') {
-    bodyStyle.backgroundColor = 'darkblue';
+    mainStyle.backgroundColor = 'darkblue';
   }else if (event.target.id === 'background-pink') {
-    bodyStyle.backgroundColor = 'pink';
+    mainStyle.backgroundColor = 'pink';
   } else if (event.target.id === 'background-brown') {
-    bodyStyle.backgroundColor = 'brown';
+    mainStyle.backgroundColor = 'brown';
   }
   
 }

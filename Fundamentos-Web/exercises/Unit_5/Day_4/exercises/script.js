@@ -67,7 +67,7 @@ function changeFontSize(event) {
   }
 
   let fontSize = paragraph[0].style.fontSize;
-  localStorage.setItem('textColor', fontSize);
+  localStorage.setItem('fontSize', fontSize);
 }
 
 fontSize.addEventListener('click', changeFontSize);
@@ -83,6 +83,9 @@ function changeLineHeight(event) {
       paragraph[index].style.lineHeight = '35px';
     }
   }
+
+  let lineHeight = paragraph[0].style.lineHeight;
+  localStorage.setItem('lineHeight', lineHeight);
 }
 
 lineHeight.addEventListener('click', changeLineHeight);

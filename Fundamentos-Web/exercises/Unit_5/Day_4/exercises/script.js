@@ -5,7 +5,9 @@ const paragraph = document.querySelectorAll('.paragraph');
 
 // Function to change the site backgroun color
 function changeBackgroundColor(event) {
-  if (event.target.id === 'background-white') {
+  if (event.target.id === 'background-black') {
+    bodyStyle.backgroundColor = 'black';
+  } else if (event.target.id === 'background-white') {
     bodyStyle.backgroundColor = 'white';
   }else if (event.target.id === 'background-grey') {
     bodyStyle.backgroundColor = 'grey';
@@ -25,7 +27,9 @@ personalizationButtons.addEventListener('click', changeBackgroundColor);
 function changeTextColor(event) {
 
   for (let index = 0; index < paragraph.length; index += 1) {
-    if (event.target.id === 'text-white') {
+    if (event.target.id === 'text-black') {
+      paragraph[index].style.color = 'black';
+    } if (event.target.id === 'text-white') {
       paragraph[index].style.color = 'white';
     }else if (event.target.id === 'text-grey') {
       paragraph[index].style.color = 'grey';

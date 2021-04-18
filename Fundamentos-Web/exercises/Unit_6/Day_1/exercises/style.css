@@ -55,4 +55,22 @@ input {
 
 .button button {
   padding: 10px;
+  margin-right: 50px;
+
+}
+
+.form-resume {
+  margin: 5px;
+  border: 2px solid gray;
+}
+
+.label-resume {
+  display: inline-block;
+  width: 15%;
+  font-weight: 700;
+}
+
+.input-resume {
+  display: inline-block;
+  width: 80%;
 }

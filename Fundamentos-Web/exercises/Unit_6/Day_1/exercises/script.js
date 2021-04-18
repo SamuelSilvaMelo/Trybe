@@ -57,3 +57,47 @@ function checkStartDate() {
 }
 
 startDate.addEventListener('change', checkStartDate);
+
+// Exercício 3
+
+function checkForm(event) {
+  event.preventDefault();
+
+  let labelDefinition = document.querySelectorAll('.label-definition');
+
+  let formResumeFieldset = document.createElement('fieldset');
+  formResumeFieldset.className = 'resume-fieldset';
+
+  let title = document.createElement('h1');
+  title.innerText = 'Resumo do Currículo';
+
+  formResumeFieldset.appendChild(title);
+
+  for (let index = 0; index < labelDefinition.length; index += 1) {
+
+    let labelResumeDiv = document.createElement('div');
+    labelResumeDiv.className = 'label-resume';
+
+    let inputResumeDiv = document.createElement('div');
+    inputResumeDiv.className = 'input-resume';
+
+    formResumeFieldset.appendChild(labelResumeDiv);
+    formResumeFieldset.appendChild(inputResumeDiv);
+
+    let createLabelParagraph = document.createElement('p');
+
+    createLabelParagraph.innerText = labelDefinition[index].innerText;
+
+    labelResumeDiv.appendChild(createLabelParagraph);
+
+    let createInputParagraph = document.createElement('p');
+
+    createInputParagraph.innerText = labelDefinition[index].nextElementSibling.firstElementChild.value;
+
+    inputResumeDiv.appendChild(createInputParagraph);
+
+    document.querySelector('body').appendChild(formResumeFieldset);
+  }
+}
+
+document.querySelector('#send-button').addEventListener('click', checkForm);

@@ -1,0 +1,76 @@
+html {
+  max-width: max-content;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+#personal-information {
+  margin: 5px 10px;
+}
+
+#professional-information {
+  margin: 0 10px;
+}
+
+.label-definition {
+  display: inline-block;
+  width: 15%;
+  padding: 10px 0;
+}
+
+.input-definition , .select-definition {
+  display: inline-block;
+  width: 80%;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+}
+
+.input-definition .home , .apartment {
+  display: inline-block;
+  
+}
+
+#resume {
+  resize: none;
+  width: 96%;
+}
+
+.input-definition #start-date {
+  width: max-content;
+}
+
+.button {
+  text-align: center;
+  margin: 10px;
+}
+
+.button button {
+  padding: 10px;
+  margin-right: 50px;
+
+}
+
+.form-resume {
+  margin: 5px;
+  border: 2px solid gray;
+}
+
+.label-resume {
+  display: inline-block;
+  width: 15%;
+  font-weight: 700;
+}
+
+.input-resume {
+  display: inline-block;
+  width: 80%;
+}

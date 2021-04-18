@@ -4,7 +4,13 @@ const statesNames = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará',
 
 const statesInitials = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
 
-const startDate = document.querySelector('#start-date')
+const startDate = document.querySelector('#start-date');
+
+const bodyNode = document.querySelector('body');
+
+const sendButton = document.querySelector('#send-button');
+
+const resetButton = document.querySelector('#reset-button');
 
 function createStates() {
   for (let index = 0; index < statesNames.length; index += 1) {
@@ -58,7 +64,7 @@ function checkStartDate() {
 
 startDate.addEventListener('change', checkStartDate);
 
-// Exercício 3
+// Exercise 3
 
 function checkForm(event) {
   event.preventDefault();
@@ -96,8 +102,16 @@ function checkForm(event) {
 
     inputResumeDiv.appendChild(createInputParagraph);
 
-    document.querySelector('body').appendChild(formResumeFieldset);
+    bodyNode.appendChild(formResumeFieldset);
   }
 }
 
-document.querySelector('#send-button').addEventListener('click', checkForm);
+sendButton.addEventListener('click', checkForm);
+
+// Exercise 4
+
+function clearForm() {
+  bodyNode.removeChild(document.querySelector('.resume-fieldset'))
+}
+
+resetButton.addEventListener('click', clearForm);

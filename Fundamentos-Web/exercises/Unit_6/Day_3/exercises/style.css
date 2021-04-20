@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+html , body {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  background-color: rgb(50, 52, 51);
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 10px;
+}
+
+#main-info {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.header-img {
+  width: 70px;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.hard-skills-1 , .hard-skills-2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(241, 241, 241);
+  border: 1px solid gray;
+  border-radius: 5%;
+  margin: 5px 5px;
+  color: rgb(103, 102, 121);
+}
+
+hr {
+  width: 100px;
+  margin: 5px auto 10px auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}

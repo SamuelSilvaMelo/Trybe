@@ -54,6 +54,7 @@ body {
 .movie-container {
   display: flex;
   flex-direction: column;
+  flex-basis: 700px;
 }
 
 .movie-container h2 {
@@ -83,7 +84,6 @@ body {
   margin: 20px;
   flex-basis: 350px;
   flex-grow: 1;
-  
 }
 
 .aside-container h3, h4 {
@@ -94,4 +94,8 @@ body {
 .aside-container p {
   margin: 10px 0;
   text-align: justify;
+}
+
+.card-container div {
+  flex-basis: 16%;
 }

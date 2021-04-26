@@ -20,12 +20,12 @@ console.log(factorial(10));
 const longestWord = string => {
   let stringArray = string.split(' ');
   let biggerWordSize = 0;
-  let biggerWord = '';
+  let biggerWord;
 
     for (let word of stringArray) {
       if (word.length > biggerWordSize) {
         biggerWordSize = word.length;
-        biggerWord = word
+        biggerWord = word;
       }
     }
 

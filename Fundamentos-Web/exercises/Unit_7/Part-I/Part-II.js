@@ -53,3 +53,32 @@ document.getElementById('resetBtn').addEventListener('click', () => {
   counter.innerText = 0;
 });
 
+// 4. Crie um código JavaScript com a seguinte especificação:
+//    Não se esqueça de usar template literals
+//
+//    Função 1 : Escreva uma função que vai receber uma string como parâmetro. Sua função deverá procurar pela letra x em uma string qualquer que você determinar e 
+//    substituir pela string que você passou como parâmetro. Sua função deve retornar essa nova string .
+//    Exemplo:
+//      String determinada: "Tryber x aqui!"
+//      Parâmetro: "Bebeto"
+//      Retorno: "Tryber Bebeto aqui!"
+
+const array = ["Unix", "Bash", "HTML", "CSS", "JS"]
+
+const Funcao1 = parametro => `Tryber ${parametro} aqui!`;
+
+const Funcao2 = parametro2 => {
+  let sortArray = array.sort();
+
+  let result = `${parametro2} 
+
+  Tudo bem?
+
+  Minhas cinco principais habilidades são:
+  
+  ${sortArray}.`
+
+  return result
+}
+
+console.log(Funcao2(Funcao1('Lucas')))

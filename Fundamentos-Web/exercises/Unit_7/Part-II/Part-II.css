@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html , body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(134, 64, 67);
+}
+
+body div {
+  background-color: rgb(198, 99, 72);
+  padding: 30px;
+  border-radius: 8%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+}
+
+div p, div button {
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  background-color: purple;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+}

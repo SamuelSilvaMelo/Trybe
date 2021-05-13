@@ -22,11 +22,7 @@ const checkSum = () => {
   return new Promise((resolve, reject) => {
     const sum = sumNumbers(createArray());
 
-    if (sum < 8000) {
-      resolve(sum);
-    } else {
-      reject();
-    }
+    (sum < 8000) ? resolve(sum) : reject()
   })
 }
 
@@ -37,6 +33,10 @@ const execute = () => {
     .then((sum) => {
       const divider = [2, 3, 5, 10];
       const result = divider.map((value) => sum / value);
+      console.log(result)
+    })
+    .then((array) => {
+      const result = array.reduce(((acc, curr) => acc + curr), 0)
       console.log(result)
     })
     .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));

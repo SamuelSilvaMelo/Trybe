@@ -24,5 +24,3 @@ module.exports = {
   encode,
   decode,
 }
-
-console.log(encode('hi there'))

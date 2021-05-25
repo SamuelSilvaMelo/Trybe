@@ -13,10 +13,10 @@ To follow my development during the modules check the list below that has the fo
 - :heavy_check_mark: - Completed
 - :closed_book: - Not started
 
-## Introduction - Fundamentals of Web Development :hourglass_flowing_sand:
+## Introduction - Fundamentals of Web Development :heavy_check_mark:
 To check the blocks of content enter the respective folders.
 
-## Front-end Development :closed_book:
+## Front-end Development :hourglass_flowing_sand:
 To check the blocks of content enter the respective folders.
 
 ## Back-end Development :closed_book:

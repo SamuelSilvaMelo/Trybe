@@ -12,16 +12,18 @@ class App extends React.Component {
       email: '',
       selectedRegion: '',
       historySummary: '',
+      userTerms: '',
     }
   }
 
   changeInfo({ target }) {
-    const { value } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     const { name } = target
 
     this.setState(({
       [name]: value,
     }))
+    console.log(target.type)
   }
 
   render() {
@@ -53,7 +55,11 @@ class App extends React.Component {
             Resumo de sua história:
             <textarea name="historySummary" onChange={this.changeInfo}></textarea>
           </label>
-  
+          <label>
+            Aceita os termos de usuário:
+            <input name="userTerms" type="checkbox" onChange={this.changeInfo}></input>
+          </label>
+           <button type="button">Enviar</button>
         </form>
       </div>
     );

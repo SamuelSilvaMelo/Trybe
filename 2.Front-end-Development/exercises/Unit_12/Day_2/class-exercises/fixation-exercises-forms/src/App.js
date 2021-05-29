@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 import './App.css';
 import FullName from './fullName';
 import EmailInfo from './emailInfo';
 import SelectedRegion from './selectedRegion';
 import HistorySummary from './historySummary';
 import ProfilePhoto from './profilePhoto';
-import UserTerms from './userTerms'
+import UserTerms from './userTerms';
+import SendBtn from './sendBtn';
 
 class App extends React.Component {
   constructor() {
@@ -52,11 +53,9 @@ class App extends React.Component {
           <fieldset>
             <HistorySummary changeInfo={this.changeInfo} historySummaryValue={this.state.historySummary} />
             <ProfilePhoto handleSubmit={this.handleSubmit} fileInput={this.fileInput} />
-            <UserTerms changeInfo={this.changeInfo} userTermsInfo={this.state.userTerms} />
+            <UserTerms changeInfo={this.changeInfo} />
           </fieldset>
-          <fieldset>
-           <button className="submit-btn" disabled="" type="submit">Enviar</button>
-          </fieldset>
+            <SendBtn userTermsInfo={this.state.userTerms}/>
         </form>
       </div>
     );

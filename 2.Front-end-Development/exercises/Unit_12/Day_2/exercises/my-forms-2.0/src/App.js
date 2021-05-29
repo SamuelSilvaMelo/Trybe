@@ -4,17 +4,20 @@ import Name from './name';
 import Email from './email';
 import CPF from './CPF';
 import Address from './address';
+import City from './city';
 
 class App extends React.Component {
   constructor() {
     super()
 
     this.inputValue = this.inputValue.bind(this);
+    this.checkCityName = this.checkCityName.bind(this);
 
     this.state = {
       name: '',
       email: '',
       address: '',
+      city: '',
     }
   }
 
@@ -35,6 +38,15 @@ class App extends React.Component {
     })
   }
 
+  checkCityName({ target }) {
+    let value = target.value;
+    value = target.value.replace(/^\d/, '');
+
+    this.setState({
+      city: value
+    })
+  }
+
   render() {
     return (
       <form>
@@ -43,6 +55,7 @@ class App extends React.Component {
           <Email inputValue={ this.inputValue } />
           <CPF inputValue={ this.inputValue } />
           <Address inputValue={ this.inputValue } />
+          <City inputValue={ this.inputValue } checkCityName={ this.checkCityName } />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>);

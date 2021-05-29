@@ -3,6 +3,7 @@ import './App.css';
 import Name from './name';
 import Email from './email';
 import CPF from './CPF';
+import Address from './address';
 
 class App extends React.Component {
   constructor() {
@@ -13,6 +14,7 @@ class App extends React.Component {
     this.state = {
       name: '',
       email: '',
+      address: '',
     }
   }
 
@@ -22,6 +24,10 @@ class App extends React.Component {
     if (name === 'name') {
       value = value.toUpperCase();
       target.value = value;
+    }
+
+    if (name === 'address') {
+      value = value.replace(/[^\w\s]/gi, '')
     }
 
     this.setState({
@@ -36,6 +42,7 @@ class App extends React.Component {
           <Name inputValue={ this.inputValue } />
           <Email inputValue={ this.inputValue } />
           <CPF inputValue={ this.inputValue } />
+          <Address inputValue={ this.inputValue } />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>);

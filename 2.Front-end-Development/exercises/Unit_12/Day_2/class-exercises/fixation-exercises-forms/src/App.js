@@ -5,64 +5,42 @@ class App extends React.Component {
   constructor() {
     super()
 
-    this.changeName = this.changeName.bind(this);
-    this.changeEmail = this.changeEmail.bind(this);
-    this.changeRegion = this.changeRegion.bind(this);
-    this.changeHistory = this.changeHistory.bind(this);
+    this.changeInfo = this.changeInfo.bind(this);
 
     this.state = {
-      nomeCompleto: '',
+      fullName: '',
       email: '',
-      regiaoEscolhida: '',
-      resumoHistoria: '',
+      selectedRegion: '',
+      historySummary: '',
     }
-    console.log('constructor')
   }
 
-  changeName(event) {
+  changeInfo({ target }) {
+    const { value } = target;
+    const { name } = target
+
     this.setState(({
-      nomeCompleto: event.target.value,
+      [name]: value,
     }))
   }
-
-  changeEmail(event) {
-    this.setState(({
-      email: event.target.value,
-    }))
-  }
-
-  changeRegion(event) {
-    this.setState(({
-      regiaoEscolhida: event.target.value,
-    }))
-  }
-
-  changeHistory(event) {
-    this.setState(({
-      resumoHistoria: event.target.value,
-    }))
-  }
-
 
   render() {
-    console.log('render')
-    console.log(this)
     return (
       <div className="App">
         <form>
           <label>
             Nome Completo:
-            <input onChange={this.changeName} type="text" />
+            <input name="fullName" onChange={this.changeInfo} type="text" />
           </label>
   
           <label>
             Email:
-            <input onChange={this.changeEmail} type="email" />
+            <input name="email" onChange={this.changeInfo} type="email" />
           </label>
   
           <label>
             Escolha sua região:
-            <select onChange={this.changeRegion}>
+            <select name="selectedRegion" onChange={this.changeInfo}>
             <option>Nordeste</option>
               <option>Nordeste</option>
               <option>Norte</option>
@@ -73,7 +51,7 @@ class App extends React.Component {
   
           <label>
             Resumo de sua história:
-            <textarea onChange={this.changeHistory}></textarea>
+            <textarea name="historySummary" onChange={this.changeInfo}></textarea>
           </label>
   
         </form>

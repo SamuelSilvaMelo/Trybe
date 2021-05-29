@@ -39,40 +39,44 @@ class App extends React.Component {
     return (
       <div className="App">
         <form>
-          <label>
-            Nome Completo:
-            <input name="fullName" onChange={this.changeInfo} type="text" />
-          </label>
-  
-          <label>
-            Email:
-            <input name="email" onChange={this.changeInfo} type="email" />
-          </label>
-  
-          <label>
-            Escolha sua região:
-            <select name="selectedRegion" onChange={this.changeInfo}>
-            <option>Nordeste</option>
+          <fieldset>
+            <label>
+              Nome Completo:
+              <input name="fullName" onChange={this.changeInfo} type="text" />
+            </label>
+    
+            <label>
+              Email:
+              <input name="email" onChange={this.changeInfo} type="email" />
+            </label>
+            <label>
+              Escolha sua região:
+              <select name="selectedRegion" onChange={this.changeInfo}>
               <option>Nordeste</option>
-              <option>Norte</option>
-              <option>Sudeste</option>
-              <option>Sul</option>
-            </select>
-          </label>
-  
-          <label>
-            Resumo de sua história:
-            <textarea name="historySummary" onChange={this.changeInfo}></textarea>
-          </label>
-          <label>
-            Foto de Perfil:
-            <input type="file" onSubmit={this.handleSubmit} ref={this.fileInput}></input>
-          </label>
-          <label>
-            Aceita os termos de usuário:
-            <input name="userTerms" type="checkbox" onChange={this.changeInfo}></input>
-          </label>
+                <option>Nordeste</option>
+                <option>Norte</option>
+                <option>Sudeste</option>
+                <option>Sul</option>
+              </select>
+            </label>
+          </fieldset>
+          <fieldset>
+            <label>
+              Resumo de sua história:
+              <textarea name="historySummary" onChange={this.changeInfo}></textarea>
+            </label>
+            <label>
+              Foto de Perfil:
+              <input type="file" onSubmit={this.handleSubmit} ref={this.fileInput}></input>
+            </label>
+            <label>
+              Aceita os termos de usuário:
+              <input name="userTerms" type="checkbox" onChange={this.changeInfo}></input>
+            </label>
+          </fieldset>
+          <fieldset>
            <button type="submit">Enviar</button>
+          </fieldset>
         </form>
       </div>
     );

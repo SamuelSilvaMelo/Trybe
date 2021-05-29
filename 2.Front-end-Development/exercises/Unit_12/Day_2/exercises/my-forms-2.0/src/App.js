@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Name from './name'
+import Name from './name';
+import Email from './email'
 
 class App extends React.Component {
   constructor() {
@@ -9,7 +10,8 @@ class App extends React.Component {
     this.inputValue = this.inputValue.bind(this);
 
     this.state = {
-      name: ''
+      name: '',
+      email: '',
     }
   }
 
@@ -31,6 +33,7 @@ class App extends React.Component {
       <form>
         <fieldset>
           <Name inputValue={this.inputValue} />
+          <Email inputValue={this.inputValue} />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>);

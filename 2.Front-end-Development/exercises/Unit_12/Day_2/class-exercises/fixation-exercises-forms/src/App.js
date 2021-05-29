@@ -1,5 +1,11 @@
 import React from 'react'
 import './App.css';
+import FullName from './fullName';
+import EmailInfo from './emailInfo';
+import SelectedRegion from './selectedRegion';
+import HistorySummary from './historySummary';
+import ProfilePhoto from './profilePhoto';
+import UserTerms from './userTerms'
 
 class App extends React.Component {
   constructor() {
@@ -12,7 +18,7 @@ class App extends React.Component {
       email: '',
       selectedRegion: '',
       historySummary: '',
-      userTerms: '',
+      userTerms: false,
     }
 
     this.fileInput = React.createRef();
@@ -40,39 +46,14 @@ class App extends React.Component {
       <div className="App">
         <form>
           <fieldset>
-            <label>
-              Nome Completo:
-              <input name="fullName" onChange={this.changeInfo} type="text" />
-            </label>
-    
-            <label>
-              Email:
-              <input name="email" onChange={this.changeInfo} type="email" />
-            </label>
-            <label>
-              Escolha sua região:
-              <select name="selectedRegion" onChange={this.changeInfo}>
-              <option>Nordeste</option>
-                <option>Nordeste</option>
-                <option>Norte</option>
-                <option>Sudeste</option>
-                <option>Sul</option>
-              </select>
-            </label>
+            <FullName changeInfo={this.changeInfo} />
+            <EmailInfo changeInfo={this.changeInfo} />
+            <SelectedRegion changeInfo={this.changeInfo} />
           </fieldset>
           <fieldset>
-            <label>
-              Resumo de sua história:
-              <textarea name="historySummary" onChange={this.changeInfo}></textarea>
-            </label>
-            <label>
-              Foto de Perfil:
-              <input type="file" onSubmit={this.handleSubmit} ref={this.fileInput}></input>
-            </label>
-            <label>
-              Aceita os termos de usuário:
-              <input name="userTerms" type="checkbox" onChange={this.changeInfo}></input>
-            </label>
+            <HistorySummary changeInfo={this.changeInfo} />
+            <ProfilePhoto handleSubmit={this.handleSubmit} fileInput={this.fileInput} />
+            <UserTerms changeInfo={this.changeInfo} />
           </fieldset>
           <fieldset>
            <button type="submit">Enviar</button>

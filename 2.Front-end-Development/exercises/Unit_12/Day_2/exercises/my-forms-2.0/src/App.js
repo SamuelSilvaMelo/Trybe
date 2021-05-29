@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Name from './name';
-import Email from './email'
+import Email from './email';
+import CPF from './CPF';
 
 class App extends React.Component {
   constructor() {
@@ -32,8 +33,9 @@ class App extends React.Component {
     return (
       <form>
         <fieldset>
-          <Name inputValue={this.inputValue} />
-          <Email inputValue={this.inputValue} />
+          <Name inputValue={ this.inputValue } />
+          <Email inputValue={ this.inputValue } />
+          <CPF inputValue={ this.inputValue } />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>);

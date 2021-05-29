@@ -14,6 +14,15 @@ class App extends React.Component {
       historySummary: '',
       userTerms: '',
     }
+
+    this.fileInput = React.createRef();
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    alert(
+      `Selected file - ${this.fileInput.current.files[0].name}`
+    );
   }
 
   changeInfo({ target }) {
@@ -56,10 +65,14 @@ class App extends React.Component {
             <textarea name="historySummary" onChange={this.changeInfo}></textarea>
           </label>
           <label>
+            Foto de Perfil:
+            <input type="file" onSubmit={this.handleSubmit} ref={this.fileInput}></input>
+          </label>
+          <label>
             Aceita os termos de usuário:
             <input name="userTerms" type="checkbox" onChange={this.changeInfo}></input>
           </label>
-           <button type="button">Enviar</button>
+           <button type="submit">Enviar</button>
         </form>
       </div>
     );

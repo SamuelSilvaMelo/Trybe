@@ -38,7 +38,6 @@ class App extends React.Component {
     this.setState(({
       [name]: value,
     }))
-    console.log(target.type)
   }
 
   render() {
@@ -51,12 +50,12 @@ class App extends React.Component {
             <SelectedRegion changeInfo={this.changeInfo} />
           </fieldset>
           <fieldset>
-            <HistorySummary changeInfo={this.changeInfo} />
+            <HistorySummary changeInfo={this.changeInfo} historySummaryValue={this.state.historySummary} />
             <ProfilePhoto handleSubmit={this.handleSubmit} fileInput={this.fileInput} />
-            <UserTerms changeInfo={this.changeInfo} />
+            <UserTerms changeInfo={this.changeInfo} userTermsInfo={this.state.userTerms} />
           </fieldset>
           <fieldset>
-           <button type="submit">Enviar</button>
+           <button className="submit-btn" disabled="" type="submit">Enviar</button>
           </fieldset>
         </form>
       </div>

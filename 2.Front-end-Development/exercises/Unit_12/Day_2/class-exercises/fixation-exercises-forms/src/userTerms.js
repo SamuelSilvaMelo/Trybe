@@ -2,7 +2,13 @@ import React from 'react';
 
 class UserTerms extends React.Component {
   render() {
-    const { changeInfo } = this.props
+    const { changeInfo, userTermsInfo } = this.props
+
+    if (userTermsInfo === true) {
+      document.querySelector('.submit-btn').disabled = true
+    } else {
+      document.querySelector('.submit-btn').disabled = ''
+    }
 
     return (
       <label>

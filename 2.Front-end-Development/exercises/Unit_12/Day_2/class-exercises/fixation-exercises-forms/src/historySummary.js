@@ -2,7 +2,9 @@ import React from 'react';
 
 class HistorySummary extends React.Component {
   render() {
-    const { changeInfo } = this.props
+    const { changeInfo, historySummaryValue } = this.props;
+
+    if (historySummaryValue.length > 100) window.alert('Resuma mais o resumo da sua história :)\nTexto muito grande!')
 
     return (
       <label>

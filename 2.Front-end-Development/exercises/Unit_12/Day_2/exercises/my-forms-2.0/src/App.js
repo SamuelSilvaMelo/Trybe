@@ -6,6 +6,7 @@ import CPF from './CPF';
 import Address from './address';
 import City from './city';
 import State from './state'
+import Home from './home'
 
 class App extends React.Component {
   constructor() {
@@ -21,6 +22,7 @@ class App extends React.Component {
       address: '',
       city: '',
       state: '',
+      homeType: '',
     }
   }
 
@@ -30,16 +32,17 @@ class App extends React.Component {
     if (name === 'name') {
       value = value.toUpperCase();
       target.value = value;
-    }
+    };
 
     if (name === 'address') {
       value = value.replace(/[^\w\s]/gi, '')
-    }
+    };
+
+    value = target.type === 'radio' ? target.id : target.value;
 
     this.setState({
       [name]: value
     })
-    console.log(target.value)
   }
 
   checkCityName({ target }) {
@@ -61,6 +64,7 @@ class App extends React.Component {
           <Address inputValue={ this.inputValue } />
           <City inputValue={ this.inputValue } checkCityName={ this.checkCityName } />
           <State inputValue={ this.inputValue } />
+          <Home inputValue={ this.inputValue } />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>);

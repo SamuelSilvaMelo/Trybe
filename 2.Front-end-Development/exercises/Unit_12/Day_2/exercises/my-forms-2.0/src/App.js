@@ -5,8 +5,9 @@ import Email from './email';
 import CPF from './CPF';
 import Address from './address';
 import City from './city';
-import State from './state'
-import Home from './home'
+import State from './state';
+import Home from './home';
+import ProfessionalResume from './professionalResume'
 
 class App extends React.Component {
   constructor() {
@@ -23,6 +24,7 @@ class App extends React.Component {
       city: '',
       state: '',
       homeType: '',
+      ProfessionalResume: '',
     }
   }
 
@@ -65,6 +67,9 @@ class App extends React.Component {
           <City inputValue={ this.inputValue } checkCityName={ this.checkCityName } />
           <State inputValue={ this.inputValue } />
           <Home inputValue={ this.inputValue } />
+        </fieldset>
+        <fieldset>
+          <ProfessionalResume inputValue={ this.inputValue } />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>);

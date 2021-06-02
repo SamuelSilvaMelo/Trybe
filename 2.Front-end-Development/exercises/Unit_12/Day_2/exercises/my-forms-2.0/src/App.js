@@ -5,6 +5,7 @@ import Email from './email';
 import CPF from './CPF';
 import Address from './address';
 import City from './city';
+import State from './state'
 
 class App extends React.Component {
   constructor() {
@@ -16,8 +17,10 @@ class App extends React.Component {
     this.state = {
       name: '',
       email: '',
+      CPF: '',
       address: '',
       city: '',
+      state: '',
     }
   }
 
@@ -36,6 +39,7 @@ class App extends React.Component {
     this.setState({
       [name]: value
     })
+    console.log(target.value)
   }
 
   checkCityName({ target }) {
@@ -56,6 +60,7 @@ class App extends React.Component {
           <CPF inputValue={ this.inputValue } />
           <Address inputValue={ this.inputValue } />
           <City inputValue={ this.inputValue } checkCityName={ this.checkCityName } />
+          <State inputValue={ this.inputValue } />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>);

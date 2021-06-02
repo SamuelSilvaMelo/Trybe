@@ -8,12 +8,12 @@ class Name extends React.Component {
       <label>
         Nome:
         <input 
-        name="name" 
-        type="text" 
-        maxLength="40"
-        placeholder="Digite seu nome"
-        required={true}
-        onChange={ inputValue }
+          name="name" 
+          type="text" 
+          maxLength="40"
+          placeholder="Digite seu nome"
+          required={true}
+          onChange={ inputValue }
         />
       </label>
     )

@@ -8,12 +8,12 @@ class Address extends React.Component {
       <label>
         Endereço:
         <input 
-        name="address" 
-        type="text" 
-        maxLength="200"
-        placeholder="Digite seu endereço"
-        required={ true }
-        onChange={ inputValue }
+          name="address" 
+          type="text" 
+          maxLength="200"
+          placeholder="Digite seu endereço"
+          required={ true }
+          onChange={ inputValue }
         />
       </label>
     )

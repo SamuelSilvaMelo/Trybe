@@ -8,6 +8,7 @@ import City from './city';
 import State from './state';
 import Home from './home';
 import ProfessionalResume from './professionalResume'
+import Occupation from './occupation'
 
 class App extends React.Component {
   constructor() {
@@ -15,6 +16,7 @@ class App extends React.Component {
 
     this.inputValue = this.inputValue.bind(this);
     this.checkCityName = this.checkCityName.bind(this);
+    this.occupationAlert = this.occupationAlert.bind(this);
 
     this.state = {
       name: '',
@@ -25,6 +27,8 @@ class App extends React.Component {
       state: '',
       homeType: '',
       ProfessionalResume: '',
+      occupation: '',
+      wasAlerted: false,
     }
   }
 
@@ -56,6 +60,17 @@ class App extends React.Component {
     })
   }
 
+  occupationAlert() {
+    const { wasAlerted } = this.state;
+
+    if (wasAlerted === false) {
+      window.alert('Preencha com cuidado esta informação.');
+      this.setState({
+        wasAlerted: true,
+      })
+    }
+  }
+
   render() {
     return (
       <form>
@@ -70,6 +85,7 @@ class App extends React.Component {
         </fieldset>
         <fieldset>
           <ProfessionalResume inputValue={ this.inputValue } />
+          <Occupation inputValue={ this.inputValue } occupationAlert={ this.occupationAlert } />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>);

@@ -2,7 +2,7 @@ import React from 'react';
 
 class Email extends React.Component {
   render() {
-    const { inputValue } = this.props
+    const { inputValue, email } = this.props
 
     return (
       <label>
@@ -10,6 +10,7 @@ class Email extends React.Component {
         <input 
           name="email"
           type="email"
+          value={ email }
           maxLength="50"
           placeholder="Digite seu e-mail"
           required={ true }

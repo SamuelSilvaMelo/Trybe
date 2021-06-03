@@ -3,12 +3,13 @@ import dataStates from './dataStates'
 
 class State extends React.Component {
   render() {
-    const { inputValue } = this.props;
+    const { inputValue, state } = this.props;
     return (
       <label>
         Estado:
         <select 
           name="state"
+          value={ state }
           onClick={inputValue}
           required={true}
         >

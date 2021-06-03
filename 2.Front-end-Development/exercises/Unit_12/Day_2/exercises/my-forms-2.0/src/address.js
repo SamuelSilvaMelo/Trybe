@@ -2,14 +2,15 @@ import React from 'react';
 
 class Address extends React.Component {
   render() {
-    const { inputValue } = this.props
+    const { inputValue, address } = this.props
 
     return (
       <label>
         Endereço:
         <input 
           name="address" 
-          type="text" 
+          type="text"
+          value={ address }
           maxLength="200"
           placeholder="Digite seu endereço"
           required={ true }

@@ -2,18 +2,18 @@ import React from 'react';
 
 class Name extends React.Component {
   render() {
-    const { inputValue } = this.props
+    const { inputValue, name } = this.props
 
     return (
       <label>
         Nome:
         <input 
           name="name" 
-          type="text" 
+          type="text"
+          value={ name }
           maxLength="40"
           placeholder="Digite seu nome"
-          value={ inputValue }
-          required={true}
+          required={ true }
           onChange={ inputValue }
         />
       </label>

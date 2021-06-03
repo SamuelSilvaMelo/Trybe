@@ -2,13 +2,14 @@ import React from 'react';
 
 class ProfessionalResume extends React.Component {
   render() {
-    const { inputValue } = this.props;
+    const { inputValue, professionalResume } = this.props;
     return (
       <label>
         Resumo Profissional:
         <textarea
-          name="ProfessionalResume"
+          name="professionalResume"
           maxLength="1000"
+          value={ professionalResume }
           required={true}
           onChange={ inputValue }
         />

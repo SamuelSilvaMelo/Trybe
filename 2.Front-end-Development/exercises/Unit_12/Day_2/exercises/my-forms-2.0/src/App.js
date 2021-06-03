@@ -9,7 +9,8 @@ import State from './state';
 import Home from './home';
 import ProfessionalResume from './professionalResume';
 import Occupation from './occupation';
-import JobDescription from './jobDescription'
+import JobDescription from './jobDescription';
+import CurriculumPreview from './curriculumPreview'
 
 class App extends React.Component {
   constructor() {
@@ -18,19 +19,21 @@ class App extends React.Component {
     this.inputValue = this.inputValue.bind(this);
     this.checkCityName = this.checkCityName.bind(this);
     this.occupationAlert = this.occupationAlert.bind(this);
+    this.submitBtn = this.submitBtn.bind(this);
 
     this.state = {
       name: '',
       email: '',
-      CPF: '',
+      cpf: '',
       address: '',
       city: '',
       state: '',
       homeType: '',
-      ProfessionalResume: '',
+      professionalResume: '',
       occupation: '',
       wasAlerted: false,
       jobDescription: '',
+      isSend: false,
     }
   }
 
@@ -73,25 +76,54 @@ class App extends React.Component {
     }
   }
 
+  submitBtn() {
+    const { isSend } = this.state;
+    this.setState({
+      isSend: (isSend === false) ? true : false
+    })
+  }
+
   render() {
+    const {
+      name,
+      email,
+      cpf,
+      address,
+      city,
+      state,
+      homeType,
+      professionalResume,
+      occupation,
+      jobDescription,
+      isSend,
+    } = this.state;
     return (
-      <form>
-        <fieldset>
-          <Name inputValue={ this.inputValue } />
-          <Email inputValue={ this.inputValue } />
-          <CPF inputValue={ this.inputValue } />
-          <Address inputValue={ this.inputValue } />
-          <City inputValue={ this.inputValue } checkCityName={ this.checkCityName } />
-          <State inputValue={ this.inputValue } />
-          <Home inputValue={ this.inputValue } />
-        </fieldset>
-        <fieldset>
-          <ProfessionalResume inputValue={ this.inputValue } />
-          <Occupation inputValue={ this.inputValue } occupationAlert={ this.occupationAlert } />
-          <JobDescription inputValue={ this.inputValue } />
-        </fieldset>
-        <button type="submit">Enviar</button>
-      </form>);
+      <div>
+        <form>
+          <fieldset>
+            <Name inputValue={ this.inputValue } name={ name } />
+            <Email inputValue={ this.inputValue } email={ email } />
+            <CPF inputValue={ this.inputValue } cpf={ cpf } />
+            <Address inputValue={ this.inputValue } address={ address } />
+            <City inputValue={ this.inputValue } checkCityName={ this.checkCityName } city={ city } />
+            <State inputValue={ this.inputValue } state={ state } />
+            <Home inputValue={ this.inputValue } homeType={ homeType } />
+          </fieldset>
+          <fieldset>
+            <ProfessionalResume inputValue={ this.inputValue } ProfessionalResume={ professionalResume } />
+            <Occupation inputValue={ this.inputValue } occupationAlert={ this.occupationAlert } occupation={ occupation } />
+            <JobDescription inputValue={ this.inputValue } jobDescription={ jobDescription } />
+          </fieldset>
+          <button
+            type="button"
+            onClick={ this.submitBtn }
+          >
+            Enviar
+          </button>
+        </form>
+        { (isSend === true) ? <CurriculumPreview infos={ this.state }/> : null }
+      </div>
+    );
   }
 }
 

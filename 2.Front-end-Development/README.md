@@ -8,11 +8,11 @@
 - [x] 11.2: _React Components_
 - [x] 11.3: [_Project - Movie Cards Library_]()
 
-#### Unit 12: Components with Status, Events and Forms with React :hourglass_flowing_sand:
+#### Unit 12: Components with Status, Events and Forms with React :heavy_check_mark:
 
-- [ ] 12.1: _Stateful components and events_
-- [ ] 12.2: _React Forms_
-- [ ] 12.3: [_Project - Movie Cards Library Stateful_]()
+- [x] 12.1: _Stateful components and events_
+- [x] 12.2: _React Forms_
+- [x] 12.3: [_Project - Movie Cards Library Stateful_]()
 
 #### Unit 13: Component Life Cycle and React Router :hourglass_flowing_sand:
 

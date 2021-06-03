@@ -117,34 +117,40 @@ class App extends React.Component {
     } = this.state;
     return (
       <div>
+        <h1>Currículo</h1>
         <form>
           <fieldset>
-            <Name inputValue={ this.inputValue } name={ name } />
-            <Email inputValue={ this.inputValue } email={ email } />
-            <CPF inputValue={ this.inputValue } cpf={ cpf } />
-            <Address inputValue={ this.inputValue } address={ address } />
-            <City inputValue={ this.inputValue } checkCityName={ this.checkCityName } city={ city } />
-            <State inputValue={ this.inputValue } state={ state } />
-            <Home inputValue={ this.inputValue } homeType={ homeType } />
+            <fieldset>
+              <h2>Informações Pessoais</h2>
+              <Name inputValue={ this.inputValue } name={ name } />
+              <Email inputValue={ this.inputValue } email={ email } />
+              <CPF inputValue={ this.inputValue } cpf={ cpf } />
+              <Address inputValue={ this.inputValue } address={ address } />
+              <City inputValue={ this.inputValue } checkCityName={ this.checkCityName } city={ city } />
+              <State inputValue={ this.inputValue } state={ state } />
+              <Home inputValue={ this.inputValue } homeType={ homeType } />
+            </fieldset>
+            <fieldset>
+              <h2>Resumo do Currículo</h2>
+              <ProfessionalResume inputValue={ this.inputValue } ProfessionalResume={ professionalResume } />
+              <Occupation inputValue={ this.inputValue } occupationAlert={ this.occupationAlert } occupation={ occupation } />
+              <JobDescription inputValue={ this.inputValue } jobDescription={ jobDescription } />
+            </fieldset>
+              <button
+                type="button"
+                onClick={ this.submitBtn }
+              >
+                Enviar
+              </button>
+              <button
+                type="button"
+                onClick={ this.cleanPage }
+              >
+                Limpar
+              </button>
           </fieldset>
-          <fieldset>
-            <ProfessionalResume inputValue={ this.inputValue } ProfessionalResume={ professionalResume } />
-            <Occupation inputValue={ this.inputValue } occupationAlert={ this.occupationAlert } occupation={ occupation } />
-            <JobDescription inputValue={ this.inputValue } jobDescription={ jobDescription } />
-          </fieldset>
-          <button
-            type="button"
-            onClick={ this.submitBtn }
-          >
-            Enviar
-          </button>
-          <button
-            type="button"
-            onClick={ this.cleanPage }
-          >
-            Limpar
-          </button>
         </form>
+          
         { (isSend === true) ? <CurriculumPreview infos={ this.state }/> : null }
       </div>
     );

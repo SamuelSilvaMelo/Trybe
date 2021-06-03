@@ -1,0 +1,13 @@
+h1, h2 {
+  text-align: center;
+}
+
+label {
+  display: flex;
+}
+
+input {
+  margin-left: 10px;
+  width: 100%;
+  flex-grow: 1;
+}

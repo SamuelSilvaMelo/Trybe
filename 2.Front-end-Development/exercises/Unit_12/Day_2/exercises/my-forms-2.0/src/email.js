@@ -5,9 +5,11 @@ class Email extends React.Component {
     const { inputValue, email } = this.props
 
     return (
-      <label>
-        Email:
-        <input 
+      <div>
+        <label class="label-definition" htmlFor="email">Email:</label>
+        <input
+          id="email"
+          class="input-definition"
           name="email"
           type="email"
           value={ email }
@@ -16,7 +18,8 @@ class Email extends React.Component {
           required={ true }
           onChange={ inputValue }
         />
-      </label>
+      </div>
+      
     )
   }
 }

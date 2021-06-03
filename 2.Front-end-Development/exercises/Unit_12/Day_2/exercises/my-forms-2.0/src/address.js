@@ -5,9 +5,11 @@ class Address extends React.Component {
     const { inputValue, address } = this.props
 
     return (
-      <label>
-        Endereço:
-        <input 
+      <div>
+        <label class="label-definition" htmlFor="address">Endereço:</label>
+        <input
+          id="address"
+          class="input-definition"
           name="address" 
           type="text"
           value={ address }
@@ -16,7 +18,8 @@ class Address extends React.Component {
           required={ true }
           onChange={ inputValue }
         />
-      </label>
+      </div>
+
     )
   }
 }

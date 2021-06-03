@@ -5,9 +5,11 @@ class CPF extends React.Component {
     const { inputValue, cpf } = this.props
 
     return (
-      <label>
-        CPF:
-        <input 
+      <div>
+        <label class="label-definition" htmlFor="cpf">CPF:</label>
+        <input
+          id="cpf"
+          class="input-definition"
           name="cpf"
           type="text"
           value={ cpf }
@@ -16,7 +18,8 @@ class CPF extends React.Component {
           required={ true }
           onChange={ inputValue }
         />
-      </label>
+      </div>
+
     )
   }
 }

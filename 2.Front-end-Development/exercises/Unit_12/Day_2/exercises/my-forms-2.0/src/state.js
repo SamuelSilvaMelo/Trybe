@@ -5,14 +5,15 @@ class State extends React.Component {
   render() {
     const { inputValue, state } = this.props;
     return (
-      <label>
-        Estado:
-        <select 
-          name="state"
-          value={ state }
-          onClick={inputValue}
-          required={true}
-        >
+      <div>
+        <label class="label-definition">Estado:</label>
+          <select
+            class="select-definition"
+            name="state"
+            value={ state }
+            onClick={inputValue}
+            required={true}
+          >
           {dataStates.map((state) => 
             <option
               value={ `${state.name}-${state.ID}` }
@@ -21,8 +22,8 @@ class State extends React.Component {
                 { state.name }
             </option>
           )}
-        </select>
-      </label>
+          </select>
+      </div>
     )
   }
 }

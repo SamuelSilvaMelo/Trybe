@@ -119,8 +119,8 @@ class App extends React.Component {
       <div>
         <h1>Currículo</h1>
         <form>
-          <fieldset>
-            <fieldset>
+          <fieldset id="main-fieldset">
+            <fieldset id="personal-information">
               <h2>Informações Pessoais</h2>
               <Name inputValue={ this.inputValue } name={ name } />
               <Email inputValue={ this.inputValue } email={ email } />
@@ -130,12 +130,13 @@ class App extends React.Component {
               <State inputValue={ this.inputValue } state={ state } />
               <Home inputValue={ this.inputValue } homeType={ homeType } />
             </fieldset>
-            <fieldset>
+            <fieldset id="professional-information">
               <h2>Resumo do Currículo</h2>
               <ProfessionalResume inputValue={ this.inputValue } ProfessionalResume={ professionalResume } />
               <Occupation inputValue={ this.inputValue } occupationAlert={ this.occupationAlert } occupation={ occupation } />
               <JobDescription inputValue={ this.inputValue } jobDescription={ jobDescription } />
             </fieldset>
+            <div className="button">
               <button
                 type="button"
                 onClick={ this.submitBtn }
@@ -148,6 +149,7 @@ class App extends React.Component {
               >
                 Limpar
               </button>
+            </div>
           </fieldset>
         </form>
           

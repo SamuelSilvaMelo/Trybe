@@ -4,18 +4,22 @@ class CurriculumPreview extends React.Component {
   render() {
     const { infos } = this.props;
     return (
-      <div>
-          <p>Nome Completo: { infos.name } </p>
-          <p>E-mail: { infos.email } </p>
-          <p>CPF: { infos.CPF } </p>
-          <p>Endereço:  { infos.address } </p>
-          <p>Cidade: { infos.city } </p>
-          <p>Estado/UF: { infos.state } </p>
-          <p>Moradia: { infos.homeType } </p>
-          <p>Resumo Profissional: { infos.ProfessionalResume } </p>
-          <p>Cargo: { infos.occupation } </p>
-          <p>Descriçaõ do Cargo: { infos.jobDescription } </p>
-      </div>
+      <fieldset className="resume-fieldset">
+        <div>
+          <h1>Resumo do Currículo</h1>
+          <p class="curriculum-resume">Nome Completo: { infos.name } </p>
+          <p class="curriculum-resume">E-mail: { infos.email } </p>
+          <p class="curriculum-resume">CPF: { infos.CPF } </p>
+          <p class="curriculum-resume">Endereço:  { infos.address } </p>
+          <p class="curriculum-resume">Cidade: { infos.city } </p>
+          <p class="curriculum-resume">Estado/UF: { infos.state } </p>
+          <p class="curriculum-resume">Moradia: { infos.homeType } </p>
+          <p class="curriculum-resume">Resumo Profissional: { infos.ProfessionalResume } </p>
+          <p class="curriculum-resume">Cargo: { infos.occupation } </p>
+          <p class="curriculum-resume">Descriçaõ do Cargo: { infos.jobDescription } </p>
+        </div>
+      </fieldset>
+
     )
   }
 }

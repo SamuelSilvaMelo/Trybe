@@ -5,10 +5,11 @@ class City extends React.Component {
     const { inputValue, checkCityName, city } = this.props
 
     return (
-      <label>
-        Cidade:
+      <div>
+        <label class="label-definition" htmlFor="city">Cidade:</label>
         <input 
-          name="city" 
+          name="city"
+          class="input-definition"
           type="text"
           value={ city }
           maxLength="28"
@@ -17,7 +18,8 @@ class City extends React.Component {
           onChange={ inputValue }
           onBlur={ checkCityName }
         />
-      </label>
+      </div>
+      
     )
   }
 }

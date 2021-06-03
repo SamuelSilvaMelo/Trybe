@@ -5,9 +5,11 @@ class Name extends React.Component {
     const { inputValue, name } = this.props
 
     return (
-      <label>
-        Nome:
-        <input 
+      <div>
+        <label class="label-definition" htmlFor="name">Nome:</label>
+        <input
+          id="name"
+          class="input-definition"
           name="name" 
           type="text"
           value={ name }
@@ -16,7 +18,8 @@ class Name extends React.Component {
           required={ true }
           onChange={ inputValue }
         />
-      </label>
+      </div>
+      
     )
   }
 }

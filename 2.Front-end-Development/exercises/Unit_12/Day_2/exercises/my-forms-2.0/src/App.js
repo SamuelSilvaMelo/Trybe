@@ -20,6 +20,7 @@ class App extends React.Component {
     this.checkCityName = this.checkCityName.bind(this);
     this.occupationAlert = this.occupationAlert.bind(this);
     this.submitBtn = this.submitBtn.bind(this);
+    this.cleanPage = this.cleanPage.bind(this);
 
     this.state = {
       name: '',
@@ -83,6 +84,23 @@ class App extends React.Component {
     })
   }
 
+  cleanPage() {
+    this.setState({
+      name: '',
+      email: '',
+      cpf: '',
+      address: '',
+      city: '',
+      state: '',
+      homeType: '',
+      professionalResume: '',
+      occupation: '',
+      wasAlerted: false,
+      jobDescription: '',
+      isSend: false,
+    });
+  }
+
   render() {
     const {
       name,
@@ -119,6 +137,12 @@ class App extends React.Component {
             onClick={ this.submitBtn }
           >
             Enviar
+          </button>
+          <button
+            type="button"
+            onClick={ this.cleanPage }
+          >
+            Limpar
           </button>
         </form>
         { (isSend === true) ? <CurriculumPreview infos={ this.state }/> : null }

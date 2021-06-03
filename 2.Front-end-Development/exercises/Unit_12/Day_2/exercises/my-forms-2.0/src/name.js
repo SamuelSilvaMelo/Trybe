@@ -12,6 +12,7 @@ class Name extends React.Component {
           type="text" 
           maxLength="40"
           placeholder="Digite seu nome"
+          value={ inputValue }
           required={true}
           onChange={ inputValue }
         />

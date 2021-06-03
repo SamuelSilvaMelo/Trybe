@@ -7,8 +7,9 @@ import Address from './address';
 import City from './city';
 import State from './state';
 import Home from './home';
-import ProfessionalResume from './professionalResume'
-import Occupation from './occupation'
+import ProfessionalResume from './professionalResume';
+import Occupation from './occupation';
+import JobDescription from './jobDescription'
 
 class App extends React.Component {
   constructor() {
@@ -29,6 +30,7 @@ class App extends React.Component {
       ProfessionalResume: '',
       occupation: '',
       wasAlerted: false,
+      jobDescription: '',
     }
   }
 
@@ -86,6 +88,7 @@ class App extends React.Component {
         <fieldset>
           <ProfessionalResume inputValue={ this.inputValue } />
           <Occupation inputValue={ this.inputValue } occupationAlert={ this.occupationAlert } />
+          <JobDescription inputValue={ this.inputValue } />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>);

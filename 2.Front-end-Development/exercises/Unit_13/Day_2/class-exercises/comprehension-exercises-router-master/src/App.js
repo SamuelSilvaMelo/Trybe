@@ -22,7 +22,7 @@ class App extends Component {
         <main>
           <Route exact path="/" component={ Home } />
           <Route path="/about" component={ About } />
-          <Route path="/users" component={ Users } />
+          <Route path="/users" render={ () => <Users greetingMessage="Good Morning" /> } />
         </main>
       </BrowserRouter>
     );

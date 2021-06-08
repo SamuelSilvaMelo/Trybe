@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import './App.css'
 import Home from './components/Home';
 import About from './components/About';
@@ -20,9 +20,11 @@ class App extends Component {
           </nav>
         </header>
         <main>
-          <Route exact path="/" component={ Home } />
-          <Route exact path="/about" component={ About } />
-          <Route exact path="/users/:id" render={ (props) => <Users {...props} greetingMessage="Good Morning" /> } />
+          <Switch>
+            <Route path="/users/:id" render={ (props) => <Users {...props} greetingMessage="Good Morning" /> } />
+            <Route exact path="/about" component={ About } />
+            <Route exact path="/" component={ Home } />
+          </Switch>
         </main>
       </BrowserRouter>
     );

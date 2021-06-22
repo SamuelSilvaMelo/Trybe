@@ -14,16 +14,16 @@
 - [x] 12.2: _React Forms_
 - [x] 12.3: [_Project - Movie Cards Library Stateful_]()
 
-#### Unit 13: Component Life Cycle and React Router :hourglass_flowing_sand:
+#### Unit 13: Component Life Cycle and React Router :heavy_check_mark:
 
-- [ ] 13.1: _Component lifecycle_
-- [ ] 13.2: _React Router_
-- [ ] 13.3: [_Project - Movie Cards Library CRUD_]()
+- [x] 13.1: _Component lifecycle_
+- [x] 13.2: _React Router_
+- [x] 13.3: [_Project - Movie Cards Library CRUD_]()
 
-#### Unit 14: Agile Methodologies :hourglass_flowing_sand:
+#### Unit 14: Agile Methodologies :heavy_check_mark:
 
-- [ ] 14.1: _Agile Methodologies_
-- [ ] 14.2: [_Project - Frontend Online Store_]()
+- [x] 14.1: _Agile Methodologies_
+- [x] 14.2: [_Project - Frontend Online Store_]()
 
 #### Unit 15: Automated testing with React Testing Library :hourglass_flowing_sand:
 

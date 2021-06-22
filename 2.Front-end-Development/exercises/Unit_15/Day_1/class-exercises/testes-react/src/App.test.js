@@ -8,3 +8,9 @@ test('Verificando se existe o campo Email.', () => {
   expect(inputEmail).toBeInTheDocument();
   expect(inputEmail.type).toBe('email');
 });
+
+test('Verificando se existe um botão', () => {
+  const { getByRole } = render(<App />);
+  const btn = getByRole('button');
+  expect(btn).toBeInTheDocument();
+});

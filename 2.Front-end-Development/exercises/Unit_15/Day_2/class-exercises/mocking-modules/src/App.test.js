@@ -50,3 +50,10 @@ it('should fetch users', async () => {
   expect(global.fetch).toBeCalledTimes(1);
   expect(global.fetch).toBeCalledWith('https://icanhazdadjoke.com/', {"headers": {"Accept": "application/json"}});
 });
+
+// Outro modo de fazer os testes com async/await
+
+// global.fetch = jest.fn(async () => ({
+//   json: async () => joke
+// }));
+

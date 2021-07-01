@@ -17,3 +17,27 @@ const action =  {
 const actionCreator =  (action)  => action;
 
 ```
+
+## Dispatch an Action Event
+
+[Link to freeCodeCamp exercise.](https://www.freecodecamp.org/learn/front-end-libraries/redux/dispatch-an-action-event)
+
+### My solution
+
+```
+
+const store =  Redux.createStore(
+	(state =  {login:  false})  => state
+);
+
+const loginAction =  ()  =>  {
+	return  {
+		type:  'LOGIN'
+	}
+};
+
+// Dispatch the action here:
+
+store.dispatch(loginAction());
+
+```

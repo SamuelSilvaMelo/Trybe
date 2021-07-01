@@ -35,3 +35,18 @@ const store =  Redux.createStore(
 const currentState = store.getState();
 
 ```
+
+## Define a Redux Action
+
+[Link to freeCodeCamp exercise.](https://www.freecodecamp.org/learn/front-end-libraries/redux/define-a-redux-action)
+
+### My solution
+
+```
+// Define an action here:
+
+const action =  {
+	type:  'LOGIN'
+}
+
+```

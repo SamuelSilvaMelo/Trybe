@@ -239,3 +239,56 @@ store.dispatch({type: ADD});
 console.log(count);
 
 ```
+
+## Combine Multiple Reducers
+
+[Link to freeCodeCamp exercise.](https://www.freecodecamp.org/learn/front-end-libraries/redux/combine-multiple-reducers)
+
+### My solution
+
+```
+
+const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
+
+const counterReducer = (state = 0, action) => {
+  switch(action.type) {
+  case INCREMENT:
+    return state + 1;
+  case DECREMENT:
+    return state - 1;
+  default:
+    return state;
+  }
+};
+
+const LOGIN = 'LOGIN';
+const LOGOUT = 'LOGOUT';
+
+const authReducer = (state = {authenticated: false}, action) => {
+  switch(action.type) {
+  case LOGIN:
+    return {
+       authenticated: true
+    }
+  case LOGOUT:
+     return {
+      authenticated: false
+    }
+  default:
+    return state;
+  }
+};
+
+// Define the root reducer below this line
+
+const rootReducer = Redux.combineReducers({
+  count: counterReducer,
+  auth: authReducer,
+})
+
+// Define the root reducer above this line
+
+const store = Redux.createStore(rootReducer);
+
+```

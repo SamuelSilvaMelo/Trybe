@@ -506,3 +506,37 @@ const addToDo = (todo) => {
 const store = Redux.createStore(immutableReducer);
 
 ```
+
+## Remove an Item from an Array
+
+[Link to freeCodeCamp exercise.](https://www.freecodecamp.org/learn/front-end-libraries/redux/remove-an-item-from-an-array)
+
+### My solution
+
+```
+
+const immutableReducer = (state = [0,1,2,3,4,5], action) => {
+  switch(action.type) {
+	case 'REMOVE_ITEM':
+		// Don't mutate state here or the tests will fail
+		// Change code below this line
+
+		return [...state.slice(0, action.index), ...state.slice(action.index + 1)]
+		// Reference: https://redux.js.org/usage/structuring-reducers/immutable-update-patterns
+
+		// Change code above this line
+	default:
+		return state;
+  }
+};
+
+const removeItem = (index) => {
+  return {
+    type: 'REMOVE_ITEM',
+    index
+  }
+}
+
+const store = Redux.createStore(immutableReducer);
+
+```

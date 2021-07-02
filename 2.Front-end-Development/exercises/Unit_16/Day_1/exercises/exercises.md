@@ -77,41 +77,6 @@ const loginAction =  ()  =>  {
 
 ```
 
-## Handle an Action in the Store
-
-[Link to freeCodeCamp exercise.](https://www.freecodecamp.org/learn/front-end-libraries/redux/handle-an-action-in-the-store)
-
-### My solution
-
-```
-
-const defaultState =  {
-	login:  false
-};
-
-const reducer =  (state = defaultState, action)  =>  {
-	// Change code below this line
-
-	switch(action.type)  {
-	case  'LOGIN':
-		return  { login:  true  };
-	default:
-		return state;
-	}
-
-	// Change code above this line
-};
-
-const store =  Redux.createStore(reducer);
-
-const loginAction =  ()  =>  {
-	return  {
-		type:  'LOGIN'
-	}
-};
-
-```
-
 ## Use a Switch Statement to Handle Multiple Actions
 
 [Link to freeCodeCamp exercise.](https://www.freecodecamp.org/learn/front-end-libraries/redux/use-a-switch-statement-to-handle-multiple-actions)

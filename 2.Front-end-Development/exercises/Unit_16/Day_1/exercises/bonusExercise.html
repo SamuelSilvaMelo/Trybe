@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.0/redux.js"></script> 
+  <title>Redux</title>
+</head>
+<body>
+  <h1>Treinando Redux</h1>
+  <input type="number" min="0" value="0" id="incInput"/>
+  <button id="incButton">+</button>
+  <span id="counter">0</span>
+  <button id="decButton">-</button>
+  <input type="number" max="0" value="0" id="decInput"/>
+  <h3>Contador de clicks</h3>
+  <span id="clickCount">0</span>
+  <script>
+    const INCREMENT = 'INCREMENT';
+    const DECREMENT = 'DECREMENT';
+    const CLICK_INCREMENT = 'CLICK_INCREMENT';
+
+    function countReduce(state = 0, action) {
+      switch (action.type) {
+        case INCREMENT:
+          return state = state + action.inc;
+
+        case DECREMENT:
+          return state = state + action.dec;
+
+        default:
+          return state;
+      }
+    }
+
+    function clickCountReduce(clickCounter = 0, action) {
+      switch (action.type) {
+        case CLICK_INCREMENT:
+          return clickCounter = clickCounter + 1;
+
+        default:
+          return clickCounter;
+      }
+    }
+
+    function clickIncrement() {
+      return {
+        type: CLICK_INCREMENT,
+      }
+    }
+
+    function handleCounterInc(value) {
+      return {
+        type: INCREMENT,
+        inc: value,
+      };
+    }
+
+    function handleCounterDec(value) {
+      return {
+        type: DECREMENT,
+        dec: value
+      };
+    }
+
+    document.getElementById('incButton').addEventListener('click', () => {
+      const value = document.getElementById('incInput').value;
+      store.dispatch(handleCounterInc(parseInt(value)));
+      store.dispatch(clickIncrement());
+    });
+
+    document.getElementById('decButton').addEventListener('click', () => {
+      const value = document.getElementById('decInput').value;
+      store.dispatch(handleCounterDec(parseInt(value)));
+      store.dispatch(clickIncrement());
+    });
+
+    const rootReducer = Redux.combineReducers({
+      countReduce,
+      clickCountReduce,
+    })
+
+    const store = Redux.createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+
+    store.subscribe(() => {
+      document.getElementById('counter').innerHTML = store.getState().countReduce;
+      document.getElementById('clickCount').innerHTML = store.getState().clickCountReduce;
+    })
+    console.log(store.getState(countReduce));
+  </script>
+</body>
+</html> 

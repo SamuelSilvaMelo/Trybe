@@ -1,62 +1,49 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import { filterTask } from './redux/actions/addTodo';
 import InputTodo from './InputTodo';
 import Item from './Item';
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      listTodo: [],
-      selectTask: '',
-      disabled: true,
-    };
-
-    this.addTodo = this.addTodo.bind(this);
-    this.handleEvent = this.handleEvent.bind(this);
-    this.handleRemove = this.handleRemove.bind(this);
-
-
-  }
-
-  addTodo(todo) {
-    this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
-  }
-
-  handleEvent({ target }) {
-    this.setState({
-      selectTask: target.innerHTML,
-      disabled: false,
-    })  
-  }
-
-  handleRemove() {
-    const { listTodo, selectTask } = this.state;
-    const newArr = listTodo.filter((itemList) => itemList !== selectTask)
-    this.setState({
-      listTodo: newArr,
-      disabled: true,
-    })
-  }
-
-  render() {
-    const { listTodo, disabled } = this.state;
-    return (
-      <div className="App">
-        <InputTodo disabled={ disabled } handleRemove={ this.handleRemove } addTodo={(todo) => this.addTodo(todo)} />
-        {listTodo &&
-          <ul>
-            {
-              listTodo.map((todo, index) => (
-                <li key={index + 1} >
-                  <Item content={todo} handleEvent={ this.handleEvent } />
-                </li>
-              ))
-            }
-          </ul>
-        }
-      </div>
-    );
-  }
+function App({ listTodo, doneTask, filterTask, filterBy }) {
+  return (
+    <div className="App">
+      <InputTodo />
+      <select onChange={ filterTask }>
+        <option>Em andamento</option>
+        <option>Finalizadas</option>
+      </select>
+      {(filterBy === 'Em andamento')
+        ? (<ul>
+          {
+            listTodo.map((todo, index) => (
+              <li key={index + 1} >
+                <Item content={todo} />
+              </li>
+            ))
+          }
+        </ul>)
+        : (<ul>
+          {
+            doneTask.map((todo, index) => (
+              <li key={index + 1} >
+                <Item content={todo} />
+              </li>
+            ))
+          }
+        </ul>)
+      }
+    </div>
+  );
 }
-export default App;
+
+const mapStateToProps = state => ({
+  listTodo: state.todoListReducer.listTodo,
+  doneTask: state.todoListReducer.doneTask,
+  filterBy: state.todoListReducer.filterBy,
+})
+
+const mapDispatchToProps = dispatch => ({
+  filterTask: ({ target }) => dispatch(filterTask(target))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

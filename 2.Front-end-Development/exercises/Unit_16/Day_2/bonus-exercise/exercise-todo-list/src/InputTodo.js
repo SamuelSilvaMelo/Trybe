@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addTodo, removeTask } from './redux/actions/addTodo'
 import PropTypes from 'prop-types'
 
 class InputTodo extends Component {
@@ -21,7 +23,7 @@ class InputTodo extends Component {
   }
 
   render() {
-    const { addTodo, handleRemove, disabled } = this.props;
+    const { addTodo, removeTask, disabled } = this.props;
     const { textTodo } = this.state;
     return (
       <div className="InputTodo">
@@ -32,14 +34,24 @@ class InputTodo extends Component {
           value={textTodo}
           onChange={(e) => this.changeTextTodo(e.target.value)}
         />
-        <input id="btnAdd" type="button" value="Adicionar" onClick={() => this.addItem(textTodo,addTodo)} />
-        <input data-testid="id-remove" id="btnRemove" type="button" value="Remover" disabled={ disabled } onClick={ handleRemove } />
+        <input id="btnAdd" type="button" value="Adicionar" onClick={() => this.addItem(textTodo, addTodo) } />
+        <input data-testid="id-remove" id="btnRemove" type="button" value="Remover" disabled={ disabled } onClick={ removeTask } />
       </div>
     );
   }
 }
-export default InputTodo;
+
+const mapStateToProps = state => ({
+  disabled: state.todoListReducer.disabled,
+})
+
+const mapDispatchToProps = dispatch => ({
+  addTodo: (todo) => dispatch(addTodo(todo)),
+  removeTask: () => dispatch(removeTask()),
+});
 
 InputTodo.propTypes = {
   addTodo: PropTypes.func.isRequired,
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(InputTodo);

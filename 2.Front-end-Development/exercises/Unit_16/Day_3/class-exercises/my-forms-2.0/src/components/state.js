@@ -1,31 +1,35 @@
 import React from 'react';
-import dataStates from '../data/dataStates'
+import dataStates from '../data/dataStates';
+import { connect } from 'react-redux';
+import { inputValue } from '../redux/actions';
 
-class State extends React.Component {
-  render() {
-    const { inputValue, state } = this.props;
-    return (
-      <div>
-        <label class="label-definition">Estado:</label>
-          <select
-            class="select-definition"
-            name="state"
-            value={ state }
-            onClick={inputValue}
-            required={true}
+function State(props) {
+  const { inputValue } = props;
+
+  return (
+    <div>
+      <label className="label-definition">Estado:</label>
+        <select
+          name="state"
+          className="select-definition"
+          onChange={ inputValue }
+          required={ true }
+        >
+        {dataStates.map((state) => 
+          <option
+            value={ `${state.name}-${state.ID}` }
+            key={ state.ID }
           >
-          {dataStates.map((state) => 
-            <option
-              value={ `${state.name}-${state.ID}` }
-              key={ state.ID }
-            >
-                { state.name }
-            </option>
-          )}
-          </select>
-      </div>
-    )
-  }
+              { state.name }
+          </option>
+        )}
+        </select>
+    </div>
+  );
 }
 
-export default State
+const mapDispatchToProps = dispatch => ({
+  inputValue: ({ target }) => dispatch(inputValue(target)),
+});
+
+export default connect(null, mapDispatchToProps)(State);

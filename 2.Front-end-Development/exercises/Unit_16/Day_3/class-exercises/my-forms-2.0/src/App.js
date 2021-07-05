@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
-import Name from './name';
-import Email from './email';
-import CPF from './CPF';
-import Address from './address';
-import City from './city';
-import State from './state';
-import Home from './home';
-import ProfessionalResume from './professionalResume';
-import Occupation from './occupation';
-import JobDescription from './jobDescription';
-import CurriculumPreview from './curriculumPreview'
+import Name from './components/name';
+import Email from './components/email';
+import CPF from './components/CPF';
+import Address from './components/address';
+import City from './components/city';
+import State from './components/state';
+import Home from './components/home';
+import ProfessionalResume from './components/professionalResume';
+import Occupation from './components/occupation';
+import JobDescription from './components/jobDescription';
+import CurriculumPreview from './components/curriculumPreview'
 
 class App extends React.Component {
   constructor() {

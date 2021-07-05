@@ -1,5 +1,5 @@
 import React from 'react';
-import dataStates from './dataStates'
+import dataStates from '../data/dataStates'
 
 class State extends React.Component {
   render() {

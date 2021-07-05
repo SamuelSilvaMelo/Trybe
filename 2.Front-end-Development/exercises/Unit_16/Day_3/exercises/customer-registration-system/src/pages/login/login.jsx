@@ -1,26 +1,23 @@
-function Login() {
+import FormLogin from '../../components/formLogin';
+import { Redirect } from 'react-router';
+import { connect } from 'react-redux';
+
+function Login(props) {
+  const { isLogged } = props;
+
+  if (isLogged) {
+    return (
+      <Redirect to="/registered-customers" />
+    )
+  }
+
   return (
-    <div>
-      <div>
-        Login
-      </div>
-      <div>
-        <form>
-          <fieldset>
-            <label>
-              Usuário:
-              <input type="text" />
-            </label>
-            <label>
-              Senha:
-              <input type="password" />
-            </label>
-            <button type="button" >Login</button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  )
+    <FormLogin />
+  );
 }
 
-export default Login;
+const mapStateToProps = state => ({
+  isLogged: state.userReducer.isLogged,
+})
+
+export default connect(mapStateToProps, null)(Login);

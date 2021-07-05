@@ -1,4 +1,7 @@
+import { LOGIN_SUCCESS, LOGIN_FAILURE } from '../actions';
+
 const INITIAL_STATE = {
+  isLogged: false,
   users: [
     {
       nickName: 'SamuelMelo',
@@ -8,7 +11,14 @@ const INITIAL_STATE = {
 }
 
 const userReducer = (state = INITIAL_STATE, action) => {
-  return state;
+  switch (action.type) {
+  case LOGIN_SUCCESS:
+    return { ...state, isLogged: true }
+  case LOGIN_FAILURE:
+    return { ...state, isLogged: false }
+  default:
+    return state;
+  }
 }
 
 export default userReducer;

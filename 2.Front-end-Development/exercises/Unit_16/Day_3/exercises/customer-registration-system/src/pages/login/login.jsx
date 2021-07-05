@@ -5,10 +5,8 @@ import { connect } from 'react-redux';
 function Login(props) {
   const { isLogged } = props;
 
-  if (isLogged) {
-    return (
-      <Redirect to="/registered-customers" />
-    )
+  if(isLogged) {
+    return <Redirect to="/registered-customers" />
   }
 
   return (

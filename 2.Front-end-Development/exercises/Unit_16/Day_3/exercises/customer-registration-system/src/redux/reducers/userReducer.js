@@ -1,10 +1,13 @@
-import { LOGIN_SUCCESS, LOGIN_FAILURE } from '../actions';
+import { LOGIN_SUCCESS, LOGIN_FAILURE, REGISTER_USER } from '../actions';
 
 const INITIAL_STATE = {
   isLogged: false,
   users: [
     {
-      nickName: 'SamuelMelo',
+      name: 'Samuel Melo',
+      email: 'samuel@betrybe.com',
+      age: 22,
+      user: 'SamuelMelo',
       password: '123456',
     },
   ]
@@ -13,9 +16,12 @@ const INITIAL_STATE = {
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case LOGIN_SUCCESS:
-    return { ...state, isLogged: true }
+    return { ...state, isLogged: true, }
   case LOGIN_FAILURE:
-    return { ...state, isLogged: false }
+    alert('Usuário Não Cadastrado')
+    return { ...state, isLogged: false, }
+  case REGISTER_USER:
+    return { ...state, users: [ ...state.users, action.newUser ]}
   default:
     return state;
   }

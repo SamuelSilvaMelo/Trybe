@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { loginUser } from '../redux/actions';
 
 class FormLogin extends React.Component {
@@ -20,11 +21,19 @@ class FormLogin extends React.Component {
     this.setState({
       [name]: value,
     })
-  } 
+  }
+
+  checkLogin() {
+    const { loginInput, passwordInput } = this.state;
+    const { users, loginUser } = this.props;
+
+    if (users.some(({ user }) => user === loginInput && users.some(({ password }) => password === passwordInput))) {
+      return loginUser(true)
+    }
+    return loginUser(false)
+  }
 
   render() {
-    const { loginUser } = this.props;
-
     return (
       <div>
         <div>
@@ -49,7 +58,10 @@ class FormLogin extends React.Component {
                   onChange={ this.handleLogin }
                 />
               </label>
-                <button type="button" onClick={ () => loginUser(false) }>Login</button>
+                <button type="button" onClick={ () => this.checkLogin() }>Login</button>
+                <Link to="/register-user">
+                  <button type="button" >Cadastro</button>
+                </Link>
             </fieldset>
           </form>
         </div>
@@ -58,8 +70,12 @@ class FormLogin extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  users: state.userReducer.users,
+});
+
 const mapDispatchToProps = dispatch => ({
   loginUser: (input) => dispatch(loginUser(input)),
 });
 
-export default connect(null, mapDispatchToProps)(FormLogin);
+export default connect(mapStateToProps, mapDispatchToProps)(FormLogin);

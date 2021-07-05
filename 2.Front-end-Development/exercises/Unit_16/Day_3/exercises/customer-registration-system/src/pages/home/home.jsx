@@ -1,7 +1,19 @@
+import { Link } from 'react-router-dom';
+
 function Home() {
   return (
     <div>
-      Home
+      <div>
+        Bem vindo!
+      </div>
+      <div>
+        <Link to="/login">
+          <button type="button" >Login</button>
+        </Link>
+        <Link to="/register-user">
+          <button type="button" >Cadastro</button>
+        </Link>
+      </div>
     </div>
   )
 }

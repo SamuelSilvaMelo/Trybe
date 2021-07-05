@@ -1,0 +1,60 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  padding: 30px
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+#personal-information {
+  margin: 5px 10px;
+}
+
+#professional-information {
+  margin: 0 10px;
+}
+
+.label-definition {
+  display: inline-block;
+  width: 15%;
+  padding: 10px 0;
+}
+
+.input-definition , .select-definition {
+  display: inline-block;
+  height: 25px;
+  width: 80%;
+}
+
+.select-definition {
+  display: inline-block;
+  width: min-content;
+  height: 25px;
+}
+
+.button {
+  text-align: center;
+  margin: 10px;
+}
+
+.button button {
+  padding: 10px;
+  margin-right: 50px;
+
+}
+
+.textarea-definition {
+  width: 95%;
+}
+
+.curriculum-resume {
+  font-weight: 700;
+}

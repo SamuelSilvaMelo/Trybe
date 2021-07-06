@@ -1,16 +1,8 @@
-import { LOGIN_SUCCESS, LOGIN_FAILURE, REGISTER_USER } from '../actions';
+import { LOGIN_SUCCESS, LOGIN_FAILURE, REGISTER_USER, LOGOUT } from '../actions';
 
 const INITIAL_STATE = {
   isLogged: false,
-  users: [
-    {
-      name: 'Samuel Melo',
-      email: 'samuel@betrybe.com',
-      age: 22,
-      user: 'SamuelMelo',
-      password: '123456',
-    },
-  ]
+  users: []
 }
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -22,6 +14,8 @@ const userReducer = (state = INITIAL_STATE, action) => {
     return { ...state, isLogged: false, }
   case REGISTER_USER:
     return { ...state, users: [ ...state.users, action.newUser ]}
+  case LOGOUT:
+    return { ...state, isLogged: false }
   default:
     return state;
   }

@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/registered-customers" component={ RegisteredCustomers } />
-        <Route exact path="/register-user" component={ RegisterUser } />
+        <Route exact path="/register-user" render={ () => <RegisterUser /> } />
         <Route exact path="/login" render={ () => <Login /> } />
         <Route exact path="/" component={ Home } />
         <Route exact path="*" component={ NotFound } />

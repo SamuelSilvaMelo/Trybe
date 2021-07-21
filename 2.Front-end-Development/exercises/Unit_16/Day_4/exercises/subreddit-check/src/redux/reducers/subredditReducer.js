@@ -2,12 +2,14 @@ import {
   SELECT_SUBREDDIT,
   REQUEST_SUBREDDIT_DATA,
   RECEIVE_SUBREDDIT_DATA,
+  GET_LAST_UPDATE_TIME,
 } from '../actions';
 
 const INITIAL_STATE = {
   selectedSubreddit: 'reactjs',
   isFetching: false,
-  data: {},
+  data: [],
+  time: '',
 };
 
 const subredditReducer = (state = INITIAL_STATE, action) => {
@@ -27,6 +29,11 @@ const subredditReducer = (state = INITIAL_STATE, action) => {
       ...state,
       data: action.data,
       isFetching: false,
+    };
+  case GET_LAST_UPDATE_TIME:
+    return {
+      ...state,
+      time: action.time,
     }
   default:
     return state;

@@ -30,7 +30,7 @@
 - [X] 15.1: _RTL - First steps_
 - [X] 15.2: _RTL - Mocks and Inputs_
 - [ ] 15.3: _RTL - Testing React Router_
-- [ ] 15.4: [_Project - React Tests_]()
+- [X] 15.4: [_Project - React Tests_]()
 
 #### Unit 16: State Management with Redux :hourglass_flowing_sand:
 
@@ -41,17 +41,17 @@
 - [ ] 16.5: _Tests at React-Redux_
 - [X] 16.6: [_Project - Trybe Wallet_]()
 
-#### Unit 17: Trivia Game Design :hourglass_flowing_sand:
+#### Unit 17: Trivia Game Design :heavy_check_mark:
 
 - [X] 17.1: [_Project - Trivia Game_]()
 
-#### Unit 18: Context API and React Hooks :hourglass_flowing_sand:
+#### Unit 18: Context API and React Hooks :heavy_check_mark:
 
 - [X] 18.1: _Context API at React_
 - [X] 18.2: _React Hooks - useState and useContext_
 - [X] 18.3: _React Hooks - useEffect and custom Hooks_
-- [ ] 18.4: [_Project - StarWars Datatable with Context API and Hooks_]()
+- [X] 18.4: [_Project - StarWars Datatable with Context API and Hooks_]()
 
-#### Unit 19: Project Recipes APP :hourglass_flowing_sand:
+#### Unit 19: Project Recipes APP :heavy_check_mark:
 
-- [ ] 19.1: [_Project - Recipes APP_]()
+- [X] 19.1: [_Project - Recipes APP_]()

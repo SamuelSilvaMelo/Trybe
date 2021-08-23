@@ -26,3 +26,7 @@
 	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-trybewarts
 	url = https://github.com/tryber/sd-011-project-trybewarts.git
 	branch = SamuelSilvaMelo-trybewarts-project
+[submodule "1.Fundamentals-of-Web-Development/projects/sd-011-project-js-unit-tests"]
+	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-js-unit-tests
+	url = https://github.com/tryber/sd-011-project-js-unit-tests.git
+	branch = SamuelSilvaMelo-project-js-unit-tests

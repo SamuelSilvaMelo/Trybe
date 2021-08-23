@@ -1,4 +1,4 @@
-# Introduction - Fundamentals of Web Development :hourglass_flowing_sand:
+# Introduction - Fundamentals of Web Development :heavy_check_mark:
 
 #### Unit 1: Unix, Bash and Shell Script :heavy_check_mark:
 
@@ -55,20 +55,20 @@
 - [X] 7.3: _Unit tests in JavaScript_
 - [X] 7.4: [_Project - JavaScript Unit Tests_](https://github.com/tryber/sd-011-project-js-unit-tests/tree/SamuelSilvaMelo-project-js-unit-tests)
 
-#### Unit 8: Higher Order Functions of JavaScript ES6 :hourglass_flowing_sand:
+#### Unit 8: Higher Order Functions of JavaScript ES6 :heavy_check_mark:
 
 - [X] 8.1: _JavaScript ES6 - Introduction to Higher Order Functions_
 - [X] 8.2: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
 - [X] 8.3: _JavaScript ES6 - Higher Order Functions - map and filter_
 - [X] 8.4: _JavaScript ES6 - Higher Order Functions - reduce_
 - [X] 8.5: _JavaScript ES6 - Spread operator, rest parameter, destructuring and more_
-- [ ] 8.6: [_Project - Zoo functions_](https://github.com/tryber/sd-011-project-zoo-functions/tree/SamuelSilvaMelo-zoo-functions-project)
+- [X] 8.6: [_Project - Zoo functions_](https://github.com/tryber/sd-011-project-zoo-functions/tree/SamuelSilvaMelo-zoo-functions-project)
 
-#### Unit 9: Asynchronicity & Callbacks :hourglass_flowing_sand:
+#### Unit 9: Asynchronicity & Callbacks :heavy_check_mark:
 
-- [ ] 9.1: _Asynchronous JavaScript and Callbacks_
-- [ ] 9.2: _JavaScript Promises_
-- [ ] 9.3: [_Project - Shopping Cart_](https://github.com/tryber/sd-011-project-shopping-cart/tree/SamuelSilvaMelo-project-shopping-cart)
+- [X] 9.1: _Asynchronous JavaScript and Callbacks_
+- [X] 9.2: _JavaScript Promises_
+- [X] 9.3: [_Project - Shopping Cart_](https://github.com/tryber/sd-011-project-shopping-cart/tree/SamuelSilvaMelo-project-shopping-cart)
 
 #### Unit 10: Automated Tests with Jest :heavy_check_mark:
 

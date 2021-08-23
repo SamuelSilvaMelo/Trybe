@@ -6,3 +6,7 @@
 	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-playground-functions
 	url = https://github.com/tryber/sd-011-project-playground-functions.git
 	branch = SamuelSilvaMelo-project-playground-functions
+[submodule "1.Fundamentals-of-Web-Development/projects/sd-011-project-pixels-art"]
+	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-pixels-art
+	url = git@github.com:tryber/sd-011-project-pixels-art.git
+	branch = SamuelSilvaMelo-project-pixels-art

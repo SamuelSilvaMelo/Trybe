@@ -38,3 +38,7 @@
 	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-shopping-cart
 	url = https://github.com/tryber/sd-011-project-shopping-cart.git
 	branch = SamuelSilvaMelo-project-shopping-cart
+[submodule "1.Fundamentals-of-Web-Development/projects/sd-011-project-jest"]
+	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-jest
+	url = https://github.com/tryber/sd-011-project-jest.git
+	branch = SamuelSilvaMelo-project-jest

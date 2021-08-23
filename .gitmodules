@@ -22,3 +22,7 @@
 	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-color-guess
 	url = https://github.com/tryber/sd-011-project-color-guess.git
 	branch = SamuelSilvaMelo-project-color-guess
+[submodule "1.Fundamentals-of-Web-Development/projects/sd-011-project-trybewarts"]
+	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-trybewarts
+	url = https://github.com/tryber/sd-011-project-trybewarts.git
+	branch = SamuelSilvaMelo-trybewarts-project

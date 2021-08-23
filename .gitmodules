@@ -14,3 +14,7 @@
 	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-todo-list
 	url = https://github.com/tryber/sd-011-project-todo-list.git
 	branch = SamuelSilvaMelo-todo-list-project
+[submodule "1.Fundamentals-of-Web-Development/projects/sd-011-project-meme-generator"]
+	path = 1.Fundamentals-of-Web-Development/projects/sd-011-project-meme-generator
+	url = https://github.com/tryber/sd-011-project-meme-generator.git
+	branch = SamuelSilvaMelo-meme-generator-project

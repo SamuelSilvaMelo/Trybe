@@ -15,11 +15,11 @@
 - [X] 21.1: _Most Used Functions in SQL_
 - [X] 21.2: _Uncomplicating JOINs, UNIONs and Subqueries_
 - [X] 21.3: _Stored Routines & Stored Functions_
-- [ ] 21.4: [_Project - Vocabulary Booster_]()
+- [X] 21.4: [_Project - Vocabulary Booster_](https://github.com/tryber/sd-011-mysql-vocabulary-booster/pull/9)
 
 #### Unit 22: Normalization and Database Modeling :hourglass_flowing_sand:
 
-- [ ] 22.1: _Turning Ideas into a Database Model - Part 1_
+- [X] 22.1: _Turning Ideas into a Database Model - Part 1_
 - [ ] 22.2: _Standardization, Normal Forms and Dumps_
 - [ ] 22.3: _Turning Ideas into a Database Model - Part 2_
 - [ ] 22.4: [_Project - One For All_]()
@@ -95,3 +95,4 @@
 #### Unit 32: Project - Delivery App :hourglass_flowing_sand:
 
 - [ ] 32.1: [_Project - Delivery App_]()
+

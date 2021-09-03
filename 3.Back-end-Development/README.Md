@@ -21,7 +21,7 @@
 
 - [X] 22.1: _Turning Ideas into a Database Model - Part 1_
 - [X] 22.2: _Standardization, Normal Forms and Dumps_
-- [ ] 22.3: _Turning Ideas into a Database Model - Part 2_
+- [X] 22.3: _Turning Ideas into a Database Model - Part 2_
 - [ ] 22.4: [_Project - One For All_]()
 
 #### Unit 23: Introduction to MongoDB :hourglass_flowing_sand:

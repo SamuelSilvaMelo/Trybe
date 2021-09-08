@@ -1,6 +1,6 @@
 # Back-end Development :hourglass_flowing_sand:
 
-#### Unit 20: Introduction to SQL :hourglass_flowing_sand:
+#### Unit 20: Introduction to SQL :heavy_check_mark:
 
 - [X] 20.1: _Introduction - Backend_
 - [X] 20.1: _Introduction - Relational Databases_
@@ -10,14 +10,14 @@
 - [X] 20.4: _Manipulating tables_
 - [X] 19.5: [_Project - All For One_](https://github.com/tryber/sd-011-project-mysql-all-for-one/tree/SamuelSilvaMelo-mysql-all-for-one)
 
-#### Unit 21: SQL Functions, Joins and Subqueries :hourglass_flowing_sand:
+#### Unit 21: SQL Functions, Joins and Subqueries :heavy_check_mark:
 
 - [X] 21.1: _Most Used Functions in SQL_
 - [X] 21.2: _Uncomplicating JOINs, UNIONs and Subqueries_
 - [X] 21.3: _Stored Routines & Stored Functions_
 - [X] 21.4: [_Project - Vocabulary Booster_](https://github.com/tryber/sd-011-mysql-vocabulary-booster/pull/9)
 
-#### Unit 22: Normalization and Database Modeling :hourglass_flowing_sand:
+#### Unit 22: Normalization and Database Modeling :heavy_check_mark:
 
 - [X] 22.1: _Turning Ideas into a Database Model - Part 1_
 - [X] 22.2: _Standardization, Normal Forms and Dumps_

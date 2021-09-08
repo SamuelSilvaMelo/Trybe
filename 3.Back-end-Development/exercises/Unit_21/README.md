@@ -1,4 +1,4 @@
-#### Unit 21: SQL Functions, Joins and Subqueries :hourglass_flowing_sand:
+#### Unit 21: SQL Functions, Joins and Subqueries :heavy_check_mark:
 
 - [X] 21.1: _Most Used Functions in SQL_
 - [X] 21.2: _Uncomplicating JOINs, UNIONs and Subqueries_

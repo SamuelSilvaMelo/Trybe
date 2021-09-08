@@ -22,11 +22,11 @@
 - [X] 22.1: _Turning Ideas into a Database Model - Part 1_
 - [X] 22.2: _Standardization, Normal Forms and Dumps_
 - [X] 22.3: _Turning Ideas into a Database Model - Part 2_
-- [ ] 22.4: [_Project - One For All_]()
+- [X] 22.4: [_Project - One For All_](https://github.com/tryber/sd-011-mysql-one-for-all/pull/18)
 
 #### Unit 23: Introduction to MongoDB :hourglass_flowing_sand:
 
-- [ ] 23.1: _Introduction - NoSQL_
+- [X] 23.1: _Introduction - NoSQL_
 - [ ] 23.1: _MongoDB - Introduction_
 - [ ] 23.2: _Filter Operators_
 - [ ] 23.3: [_Project - One For All_]()

@@ -1,4 +1,4 @@
-#### Unit 20: Introduction to SQL :hourglass_flowing_sand:
+#### Unit 20: Introduction to SQL :heavy_check_mark:
 
 - [X] 20.1: _Introduction - Backend_
 - [X] 20.1: _Introduction - Relational Databases_

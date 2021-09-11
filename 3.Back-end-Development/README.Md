@@ -24,12 +24,12 @@
 - [X] 22.3: _Turning Ideas into a Database Model - Part 2_
 - [X] 22.4: [_Project - One For All_](https://github.com/tryber/sd-011-mysql-one-for-all/pull/18)
 
-#### Unit 23: Introduction to MongoDB :hourglass_flowing_sand:
+#### Unit 23: Introduction to MongoDB :heavy_check_mark:
 
 - [X] 23.1: _Introduction - NoSQL_
 - [X] 23.1: _MongoDB - Introduction_
 - [X] 23.2: _Filter Operators_
-- [ ] 23.3: [_Project - One For All_]()
+- [X] 23.3: [_Project - One For All_](https://github.com/tryber/sd-011-mongodb-dataflights/pull/7)
 
 #### Unit 24: MongoDB: Simple and Complex Updates :hourglass_flowing_sand:
 

@@ -194,6 +194,7 @@ db.movies.updateOne(
 **Exercício 9:** Adicione o campo `character` com o valor `Marv` ao array de `cast` em que o campo `actor` seja igual a `Daniel Stern` no filme `Home Alone`.
 `Dica:` Para isso, [leia aqui](https://docs.mongodb.com/manual/reference/operator/update/positional/) sobre o operador `$`.
 
+**Resposta:**
 ```
 db.movies.updateMany(
   { title: "Home Alone", "cast.actor": "Daniel Stern" },
@@ -248,6 +249,7 @@ db.movies.updateOne(
 
 - Adicione o campo `actor`, que deve ser um array com o valor `Christian Bale`, ao array de `cast` em que o campo `character` seja igual a `Batman`;
 
+**Resposta:**
 ```
 db.movies.updateOne(
   {
@@ -264,6 +266,7 @@ db.movies.updateOne(
 
 - Adicione o campo `actor`, que deve ser um array com o valor `Michael Caine`, ao array de `cast` em que o campo `character` seja igual a `Alfred`;
 
+**Resposta:**
 ```
 db.movies.updateOne(
   {
@@ -280,6 +283,7 @@ db.movies.updateOne(
 
 - Adicione o campo `actor`, que deve ser um array com o valor `Heath Ledger`, ao array de `cast` em que o campo `character` seja igual a `Coringa`.
 
+**Resposta:**
 ```
 db.movies.updateOne(
   {

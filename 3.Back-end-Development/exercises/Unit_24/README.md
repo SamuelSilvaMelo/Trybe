@@ -2,6 +2,6 @@
 
 - [X] 24.1: _Simple Updates_
 - [X] 24.2: _Complex Updates - Arrays - Part 1_
-- [ ] 24.3: _Complex Updates - Arrays - Part 2_
+- [X] 24.3: _Complex Updates - Arrays - Part 2_
 - [ ] 24.4: [_Project - Commerce_]()
 

@@ -31,16 +31,16 @@
 - [X] 23.2: _Filter Operators_
 - [X] 23.3: [_Project - One For All_](https://github.com/tryber/sd-011-mongodb-dataflights/pull/7)
 
-#### Unit 24: MongoDB: Simple and Complex Updates :hourglass_flowing_sand:
+#### Unit 24: MongoDB: Simple and Complex Updates :heavy_check_mark:
 
 - [X] 24.1: _Simple Updates_
 - [X] 24.2: _Complex Updates - Arrays - Part 1_
 - [X] 24.3: _Complex Updates - Arrays - Part 2_
-- [ ] 24.4: [_Project - Commerce_]()
+- [X] 24.4: [_Project - Commerce_](https://github.com/tryber/sd-011-mongodb-commerce/pull/10)
 
 #### Unit 25: Mongo DB: Aggregation Framework :hourglass_flowing_sand:
 
-- [ ] 25.1: _Aggregation Framework - Part 1_
+- [X] 25.1: _Aggregation Framework - Part 1_
 - [ ] 25.1: _Aggregation Framework - Part 2_
 - [ ] 25.1: [_Project - Aggregations_]()
 

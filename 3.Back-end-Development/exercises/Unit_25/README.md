@@ -1,4 +1,4 @@
-#### Unit 25: Mongo DB: Aggregation Framework :hourglass_flowing_sand:
+#### Unit 25: Mongo DB: Aggregation Framework :heavy_check_mark:
 
 - [X] 25.1: _Aggregation Framework - Part 1_
 - [X] 25.1: _Aggregation Framework - Part 2_

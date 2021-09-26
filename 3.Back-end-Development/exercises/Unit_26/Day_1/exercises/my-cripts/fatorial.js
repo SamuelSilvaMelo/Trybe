@@ -1,7 +1,8 @@
 const { questionInt } = require('readline-sync');
 
 function factorial() {
-  let number = questionInt('Escolha um número positivo para descobrir qual seu fatorial: ');
+  const input = questionInt('Escolha um número positivo para descobrir qual seu fatorial: ');
+  let number = input;
   let response = 1;
 
   if (number < 0 ) {
@@ -13,7 +14,7 @@ function factorial() {
     number -= 1;
   };
 
-  console.log(response);
+  console.log(`O fatorial de ${input} e: ${response}.`);
 };
 
 module.exports = { factorial };

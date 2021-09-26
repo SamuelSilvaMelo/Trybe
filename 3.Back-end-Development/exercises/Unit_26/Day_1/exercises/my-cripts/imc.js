@@ -45,4 +45,4 @@ function calcImc() {
   );
 }
 
-calcImc();
+module.exports = { calcImc };

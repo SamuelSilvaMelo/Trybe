@@ -16,16 +16,20 @@ function raffle() {
   console.log(`Opa, não foi dessa vez. O número era ${winnerNumber} \n`);
 };
 
-raffle();
-
-let playAgain = true;
-
-while(playAgain) {
-  if (keyInYN('Jogar Novamente?')) {
-    raffle();
-  } else {
-    playAgain = false;
+function playGame() {
+  raffle();
+  
+  let playAgain = true;
+  
+  while(playAgain) {
+    if (keyInYN('Jogar Novamente?')) {
+      raffle();
+    } else {
+      playAgain = false;
+    }
   }
-}
+  
+  console.log('Bye! \n');
+};
 
-console.log('Bye! \n');
+module.exports = { playGame };

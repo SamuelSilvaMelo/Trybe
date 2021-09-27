@@ -1,5 +1,7 @@
 const fs = require('fs').promises;
 
+// 4. Realize o download deste arquivo (./simpsonFamilyBackup.json) e salve-o como simpsons.json. Utilize o arquivo baixado para realizar os requisitos abaixo.
+// 4.1. Crie uma função que leia todos os dados do arquivo e imprima cada personagem no formato id - Nome . Por exemplo: 1 - Homer Simpson.
 const listCharacters = () => {
   fs.readFile('./simpsons.json', 'utf8')
     .then((response) => {
@@ -13,6 +15,7 @@ const listCharacters = () => {
     .catch((err) => console.log(err.message));
 };
 
+// 4.2. Crie uma função que receba o id de uma personagem como parâmetro e retorne uma Promise que é resolvida com os dados da personagem que possui o id informado. Caso não haja uma personagem com o id informado, rejeite a Promise com o motivo "id não encontrado".
 const characterInfo = (id) => {
   return new Promise((resolve, reject) => {
     fs.readFile('./simpsons.json', 'utf-8')
@@ -29,6 +32,7 @@ const characterInfo = (id) => {
   });
 };
 
+// 4.3. Crie uma função que altere o arquivo simpsons.json retirando os personagens com id 10 e 6.
 const removeCharacters = async ([...ids]) => {
   try {
     const newCharacters = await fs
@@ -47,6 +51,7 @@ const removeCharacters = async ([...ids]) => {
   }
 };
 
+// 4.4. Crie uma função que leia o arquivo simpsons.json e crie um novo arquivo, chamado simpsonFamily.json , contendo as personagens com id de 1 a 4.
 const createSimpsonFamily = async () => {
   try {
     const characters = await fs
@@ -68,6 +73,7 @@ const createSimpsonFamily = async () => {
   }
 };
 
+// 4.5. Crie uma função que adicione ao arquivo simpsonFamily.json o personagem Nelson Muntz.
 const addNewCharacterToSimpsonFamily = async (characterName) => {
   try {
     const simpsonFamily = await fs
@@ -90,6 +96,7 @@ const addNewCharacterToSimpsonFamily = async (characterName) => {
   };
 };
 
+// 4.6. Crie uma função que substitua o personagem Nelson Muntz pela personagem Maggie Simpson no arquivo simpsonFamily.json.
 const replaceSimpsonFamilyCharacter = async (characterNameToRemove, characterNameToAdd) => {
   try {
     const simpsonFamily = await fs

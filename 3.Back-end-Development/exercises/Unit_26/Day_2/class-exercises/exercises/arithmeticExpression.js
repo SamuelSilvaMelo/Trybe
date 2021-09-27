@@ -16,14 +16,4 @@ const arithmeticExpression = (a, b, c) => {
   });
 };
 
-arithmeticExpression('50', 7, 10)
-  .then(resolve => console.log(resolve))
-  .catch(error => console.log(error))
-
-arithmeticExpression(2, 2, 5)
-  .then(resolve => console.log(resolve))
-  .catch(error => console.log(error))
-
-arithmeticExpression(50, 7, 10)
-  .then(resolve => console.log(resolve))
-  .catch(error => console.log(error))
+module.exports = arithmeticExpression;

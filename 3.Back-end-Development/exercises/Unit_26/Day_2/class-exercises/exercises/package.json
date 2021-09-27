@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "arithmeticExpression": "node arithmeticExpression.js",
-    "randomExperssions": "node randomExperssions.js"
+    "randomExperssions": "node randomExperssions.js",
+    "randomExperssionsWithAsyncAwait": "node randomExperssionsWithAsyncAwait.js"
   },
   "keywords": [],
   "author": "",

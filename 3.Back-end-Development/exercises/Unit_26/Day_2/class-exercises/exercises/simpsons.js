@@ -46,3 +46,24 @@ const removeCharacters = async ([...ids]) => {
     console.log(error.message)
   }
 };
+
+const createSimpsonFamily = async () => {
+  try {
+    const characters = await fs
+      .readFile('./simpsons.json', 'utf-8')
+        .then((response) => JSON.parse(response));
+
+    const simpsonFamilyIds = ['1', '2', '3', '4'];
+    const simpsonFamily = (
+      characters.filter((character) => (
+        simpsonFamilyIds.some((simpsonFamilyId) => simpsonFamilyId === character.id))
+      )
+    );
+
+    fs.writeFile('./simpsonFamily.json', JSON.stringify(simpsonFamily));
+
+  } catch (error) {
+    console.log(error.message);
+
+  }
+};

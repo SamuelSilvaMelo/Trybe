@@ -89,3 +89,26 @@ const addNewCharacterToSimpsonFamily = async (characterName) => {
     console.log(error.message);
   };
 };
+
+const replaceSimpsonFamilyCharacter = async (characterNameToRemove, characterNameToAdd) => {
+  try {
+    const simpsonFamily = await fs
+      .readFile('./simpsonFamily.json', 'utf-8')
+        .then((response) => JSON.parse(response));
+
+    const newSimpsonFamily = (
+      simpsonFamily.map((character) => {
+        if(character.name === characterNameToRemove) {
+          return { id: character.id, name: characterNameToAdd };
+        }
+
+        return character;
+      })
+    );
+
+    fs.writeFile('./simpsonFamily.json', JSON.stringify(newSimpsonFamily));
+
+  } catch (error) {
+    console.log(error.message)
+  }
+};

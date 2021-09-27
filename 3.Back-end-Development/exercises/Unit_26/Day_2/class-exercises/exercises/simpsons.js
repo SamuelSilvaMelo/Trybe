@@ -67,3 +67,25 @@ const createSimpsonFamily = async () => {
 
   }
 };
+
+const addNewCharacterToSimpsonFamily = async (characterName) => {
+  try {
+    const simpsonFamily = await fs
+      .readFile('./simpsonFamily.json', 'utf-8')
+        .then((response) => JSON.parse(response))
+    
+    const lastSimpsonFamilyCharacter = parseInt(simpsonFamily[simpsonFamily.length - 1].id);
+    const newSimpsonFamily = [
+      ...simpsonFamily,
+      {
+        id: (lastSimpsonFamilyCharacter + 1).toString(),
+        name: characterName
+      },
+    ];
+
+    fs.writeFile('./simpsonFamily.json', JSON.stringify(newSimpsonFamily));
+
+  } catch (error) {
+    console.log(error.message);
+  };
+};

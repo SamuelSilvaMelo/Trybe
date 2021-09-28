@@ -7,9 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "arithmeticExpression": "node arithmeticExpression.js",
     "randomExperssions": "node randomExperssions.js",
-    "randomExperssionsWithAsyncAwait": "node randomExperssionsWithAsyncAwait.js"
+    "randomExperssionsWithAsyncAwait": "node randomExperssionsWithAsyncAwait.js",
+    "readFile": "node readFile.js",
+    "replacesContent": "node replacesContent.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }

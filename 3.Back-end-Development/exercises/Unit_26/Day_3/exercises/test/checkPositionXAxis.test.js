@@ -26,4 +26,12 @@ describe('Verifica a função checkPositionXAxis', () => {
       expect(result).to.be.equal('Neutro');
     });
   });
+
+  describe('Retorna um erro quando:', () => {
+    it('Não recebe um número como parâmetro', () => {
+      const result = checkPositionXAxis('string');
+
+      expect(result).to.be.equal('O valor deve ser um número');
+    });
+  });
 });

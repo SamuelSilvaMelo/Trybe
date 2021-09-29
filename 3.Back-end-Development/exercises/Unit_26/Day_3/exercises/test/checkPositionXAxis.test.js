@@ -2,7 +2,6 @@ const { expect } = require('chai');
 
 const checkPositionXAxis = require('../checkPositionXAxis');
 
-
 describe('Verifica a função checkPositionXAxis', () => {
   describe('Retorna "Positivo" quando:', () => {
     it('Recebe um número maior que zero.', () => {

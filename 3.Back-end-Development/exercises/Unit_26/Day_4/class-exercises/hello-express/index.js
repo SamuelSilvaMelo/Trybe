@@ -8,8 +8,8 @@ app.listen(3001, () => {
   console.log('Aplicação ouvindo na porta 3001');
 }); // 3
 
-function handleHelloWorldRequest(req, res) {
-  res.status(200).send('Olá mundo!'); // 4
+function handleHelloWorldRequest(_req, res) {
+  res.status(200).send('Hello World!'); // 4
 }
 
 // Esse pequeno script é o suficiente para:

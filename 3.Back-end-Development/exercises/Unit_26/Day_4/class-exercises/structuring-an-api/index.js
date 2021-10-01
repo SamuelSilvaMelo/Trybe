@@ -34,6 +34,15 @@ app.get('/recipes', function(_req, res) {
   res.json(sorteredRecipes);
 });
 
+app.get('/recipes/:id', function (req, res) {
+  const { id } = req.params;
+  const recipe = recipes.find((r) => r.id === parseInt(id));
+
+  if (!recipe) return res.status(404).json({ message: 'Recipe not found!'});
+
+  res.status(200).json(recipe);
+});
+
 app.get('/drinks', function(_req, res) {
   const sorteredDrinks = (
     drinks.sort(function(a, b) {
@@ -42,6 +51,15 @@ app.get('/drinks', function(_req, res) {
   );
 
   res.json(sorteredDrinks);
+});
+
+app.get('/drinks/:id', function (req, res) {
+  const { id } = req.params;
+  const filteredDrinks = drinks.find((drink) => drink.id === parseInt(id))
+
+  if(!filteredDrinks) return res.status(404).json({ message: 'Drink not found!'});
+
+  res.status(200).json(filteredDrinks);
 });
 
 app.listen(3001, () => {

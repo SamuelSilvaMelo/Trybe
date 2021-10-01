@@ -14,3 +14,5 @@ const drinks = [
 ```
 
 2. Modifique tanto a rota de bebidas como de receitas para retornar a lista ordenada pelo nome em ordem alfabética.
+
+3. Crie uma rota `GET /drink/:id` para retornar uma bebida pelo `id`.

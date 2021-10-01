@@ -42,6 +42,28 @@ app.get('/recipes/:id', function (req, res) {
   res.status(200).json(recipe);
 });
 
+app.put('/recipes/:id', function(req, res) {
+  const { id } = req.params;
+  const { name, price } = req.body;
+  const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
+
+  if(recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
+
+  recipes[recipeIndex] = { ...recipes[recipeIndex], name, price };
+
+  res.status(204).end();
+});
+
+app.delete('/recipes/:id', function(req, res) {
+  const { id } = req.params;
+  const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
+
+  if(recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
+
+  recipes.splice(recipeIndex, 1);
+
+  res.status(204).end();
+});
 
 /*
 Como utilizar o string.localeCompare => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
@@ -81,6 +103,29 @@ app.get('/drinks/:id', function (req, res) {
   res.status(200).json(filteredDrinks);
 });
 
+app.put('/drinks/:id', function(req, res) {
+  const { id } = req.params;
+  const { name, price } = req.body;
+  const drinkIndex = drinks.findIndex((d) => d.id === parseInt(id));
+
+  if(drinkIndex === -1) return res.status(404).json({ message: 'Drink not found!' });
+
+  drinks[drinkIndex] = { ...drinks[drinkIndex], name, price };
+
+  res.status(204).end();
+});
+
+app.delete('/drinks/:id', function(req, res) {
+  const { id } = req.params;
+  const drinkIndex = drinks.findIndex((d) => d.id === parseInt(id));
+
+  if(drinkIndex === -1) return res.status(404).json({ message: 'Drink not found!' });
+
+  drinks.splice(drinkIndex, 1);
+
+  res.status(204).end();
+});
+
 /*
 Como utilizar o string.localeCompare => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
 */
@@ -101,13 +146,17 @@ app.post('/drinks', function(req, res) {
   res.status(201).json({ message: 'Drink created successfully!' })
 })
 
-  app.get('/validateToken', function (req, res) {
-    const token = req.headers.authorization;
-    if (token.length !== 16) return res.status(401).json({ message: 'Invalid Token!' });
-    
-    res.status(200).json({ message: 'Valid Token' });
-  });
+app.get('/validateToken', function (req, res) {
+  const token = req.headers.authorization;
+  if (token.length !== 16) return res.status(401).json({ message: 'Invalid Token!' });
   
-  app.listen(3001, () => {
-    console.log('Aplicaçao ouvindo na porta 3001');
-  });
+  res.status(200).json({ message: 'Valid Token' });
+});
+
+app.all('*', function(req, res) {
+  return res.status(404).json({ message: `Rota '${req.path}' não existe!` })
+});
+
+app.listen(3001, () => {
+  console.log('Aplicaçao ouvindo na porta 3001');
+});

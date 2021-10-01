@@ -1,9 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
 
 app.use(cors());
+app.use(bodyParser.json());
 
 const recipes = [
   { id: 1, name: 'Lasanha', price: 40.0, waitTime: 30 },
@@ -20,18 +22,15 @@ const drinks = [
   { id: 6, name: 'Água Mineral 500 ml', price: 5.0 },
 ];
 
-/*
-  Como utilizar o string.localeCompare => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
-*/
-
-app.get('/recipes', function(_req, res) {
-  const sorteredRecipes = (
-    recipes.sort(function(a, b) {
-      return a.name.localeCompare(b.name);
-    })
+app.get('/recipes/search', function (req, res) {
+  const { name, maxPrice, minPrice } = req.query;
+  const filteredRecipes = (
+    recipes
+      .filter((r) => r.name.includes(name))
+      .filter(({ price }) => price < parseInt(maxPrice) && price >= parseInt(minPrice))
   );
 
-  res.json(sorteredRecipes);
+  res.status(200).json(filteredRecipes);
 });
 
 app.get('/recipes/:id', function (req, res) {
@@ -43,25 +42,72 @@ app.get('/recipes/:id', function (req, res) {
   res.status(200).json(recipe);
 });
 
+
+/*
+Como utilizar o string.localeCompare => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
+*/
+
+app.get('/recipes', function(_req, res) {
+  const sorteredRecipes = (
+    recipes.sort(function(a, b) {
+      return a.name.localeCompare(b.name);
+    })
+    );
+
+    res.json(sorteredRecipes);
+  });
+  
+app.post('/recipes', function(req, res) {
+  const { id, name, price, waitTime } = req.body;
+  recipes.push({ id, name, price, waitTime });
+  res.status(201).json({ message: 'Recipe created successfully!' });
+});
+  
+app.get('/drinks/search', function(req, res) {
+  const { name } = req.query;
+  const filteredDrinks = (
+    drinks.filter((drink) => drink.name.includes(name))
+    );
+    
+    res.status(200).json(filteredDrinks);
+  })
+  
+app.get('/drinks/:id', function (req, res) {
+  const { id } = req.params;
+  const filteredDrinks = drinks.find((drink) => drink.id === parseInt(id))
+  
+  if(!filteredDrinks) return res.status(404).json({ message: 'Drink not found!'});
+  
+  res.status(200).json(filteredDrinks);
+});
+
+/*
+Como utilizar o string.localeCompare => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
+*/
+
 app.get('/drinks', function(_req, res) {
   const sorteredDrinks = (
     drinks.sort(function(a, b) {
       return a.name.localeCompare(b.name);
     })
-  );
+    );
+    
+    res.json(sorteredDrinks);
+  });
+  
+app.post('/drinks', function(req, res) {
+  const { id, name, price } = req.body;
+  drinks.push({ id, name, price});
+  res.status(201).json({ message: 'Drink created successfully!' })
+})
 
-  res.json(sorteredDrinks);
-});
-
-app.get('/drinks/:id', function (req, res) {
-  const { id } = req.params;
-  const filteredDrinks = drinks.find((drink) => drink.id === parseInt(id))
-
-  if(!filteredDrinks) return res.status(404).json({ message: 'Drink not found!'});
-
-  res.status(200).json(filteredDrinks);
-});
-
-app.listen(3001, () => {
-  console.log('Aplicaçao ouvindo na porta 3001');
-});
+  app.get('/validateToken', function (req, res) {
+    const token = req.headers.authorization;
+    if (token.length !== 16) return res.status(401).json({ message: 'Invalid Token!' });
+    
+    res.status(200).json({ message: 'Valid Token' });
+  });
+  
+  app.listen(3001, () => {
+    console.log('Aplicaçao ouvindo na porta 3001');
+  });

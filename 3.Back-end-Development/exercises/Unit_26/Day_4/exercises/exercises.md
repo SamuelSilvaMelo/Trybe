@@ -1,4 +1,6 @@
-## Agora a prática
+# Agora a prática
+
+## Exercises
 
 Inicie os exercícios criando uma aplicação Node.js com os comandos já aprendidos.
 
@@ -90,3 +92,29 @@ Inicie os exercícios criando uma aplicação Node.js com os comandos já aprend
     8.2. O corpo da requisição deve receber o seguinte JSON: `{ id: <id-da-personagem>, name: '<nome-da-personagem>' }`;
     8.3. Caso já exista uma personagem com o id informado, devolva o JSON `{ message: 'id already exists' }` com o status `409 - Conflict`;
     8.4. Caso a personagem ainda não exista, adicione-a ao arquivo simpsons.json e devolva um body vazio com o status `204 - No Content`. Para encerrar a request sem enviar nenhum dado, você pode utilizar `res.status(204).end();`.
+
+## Bônus
+
+1. Adicione autenticação a todos os endpoints:
+
+    1.1. O token deve ser enviado através do header `Authorization`;
+    1.2. O token deve ter exatamente 16 caracteres;
+    1.3. Caso o token seja inválido ou inexistente, a resposta deve possuir o status `401 - Unauthorized` e o JSON `{ message: 'Token inválido!' }`.
+
+2. Crie uma rota `POST /signup`:
+
+    2.1. A rota deve receber, no body da requisição, os campos `email`, `password`, `firstName` e `phone`;
+    2.1. Caso algum dos campos não esteja preenchido, a response deve possuir status `401 - Unauthorized` e o JSON `{ message: 'missing fields' }`;
+    2.3. Caso todos os parâmetros estejam presentes, a rota deve gerar um token aleatório válido, e a resposta deve conter o status `200 - OK`, e o JSON `{ token: '<token-aleatorio>' }`.
+
+- Para gerar o token você pode utilizar a função `randomBytes`, do módulo `crypto` do Node, dessa forma:
+
+  ```
+  const crypto = require('crypto');
+
+  function generateToken() {
+    return crypto.randomBytes(8).toString('hex');
+  }
+
+  module.exports = generateToken;
+  ```

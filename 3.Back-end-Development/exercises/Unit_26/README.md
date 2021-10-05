@@ -5,6 +5,6 @@
 - [X] 26.2: _Node.js - Asynchronous Stream_
 - [X] 26.3: _Tests with NodeJS_
 - [X] 26.4: _Express: HTTP with Node.js_
-- [ ] 26.5: _Practicing Express_
+- [X] 26.5: _Practicing Express_
 - [ ] 26.6: [_Project - Talker Manager_]()
 

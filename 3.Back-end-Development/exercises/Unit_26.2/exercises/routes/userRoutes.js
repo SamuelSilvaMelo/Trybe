@@ -19,12 +19,25 @@ route.post(
     res.status(201).json(createUser);
 
   } catch ({ errorCode, message }) {
-    res.status(401).json({
+    res.status(400).json({
       errorCode,
       message,
     });
-
   }
+});
+
+route.get(
+  '/',
+  async (_req, res) => {
+    try {
+      const allUsers = await User.findAllUsers();
+  
+      res.status(200).json(allUsers);
+
+    } catch (err) {
+      res.status(400).json({ error: true, message: err.message });
+
+    };
 });
 
 module.exports = route;

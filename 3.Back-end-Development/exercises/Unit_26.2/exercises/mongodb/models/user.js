@@ -30,13 +30,25 @@ const findAllEmails = async () => (
 const findAllUsers = async () => (
   connection()
     .then((db) => db.collection('user').find().toArray())
-    .then((response) => response)
+    .then((response) => response.map(({ _id, firstName, lastName, email, password }) => ({
+      id: _id,
+      firstName,
+      lastName,
+      email,
+      password,
+    })))
 );
 
 const findUserById = async (id) => (
   connection()
     .then((db) => db.collection('user').findOne(ObjectId(id)))
-    .then((response) => response)
+    .then(({ _id, firstName, lastName, email, password }) => ({
+      id: _id,
+      firstName,
+      lastName,
+      email,
+      password,
+    }))
 )
 
 const updateUser = async (id, firstName, lastName, email, password ) => (

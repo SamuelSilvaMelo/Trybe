@@ -33,4 +33,15 @@ const findAllUsers = async () => (
     .then((response) => response)
 );
 
-module.exports = { createUser, findAllEmails, findAllUsers };
+const findUserById = async (id) => (
+  connection()
+    .then((db) => db.collection('user').findOne(ObjectId(id)))
+    .then((response) => response)
+)
+
+module.exports = {
+  createUser,
+  findAllEmails,
+  findAllUsers,
+  findUserById
+};

@@ -40,4 +40,23 @@ route.get(
     };
 });
 
+route.get(
+  '/:id',
+  async (req, res) => {
+    try {
+      const { id } = req.params;
+  
+      const foundUser = await User.findUserById(id);
+  
+      res.status(200).json(foundUser);
+      
+    } catch (err) {
+      res.status(404).json({
+        "error": true,
+        "message": "Usuário não encontrado",
+        "TypeError": err.message
+      });
+    };
+});
+
 module.exports = route;

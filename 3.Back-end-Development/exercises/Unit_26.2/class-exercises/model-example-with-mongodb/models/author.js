@@ -1,4 +1,5 @@
 const connection = require('./connection');
+const { ObjectId } = require('mongodb');
 
 // Cria uma string com o nome completo do autor
 
@@ -48,23 +49,18 @@ const getAll = async () => {
 // @param { String } id ID do autor a ser recuperado
 
 const findById = async (id) => {
-  // Repare que substituímos o id por `?` na query.
-  // Depois, ao executá-la, informamos um array com o id para o método `execute`.
-  // o `mysql2` vai realizar, de forma segura, a substituição do `?` pelo id informado.
-  const query = 'SELECT id, first_name, middle_name, last_name FROM authors WHERE id = ?;'
-  const [ authorData ] = await connection.execute(query, [id]);
+  if (!ObjectId.isValid(id)) {
+    return null;
+  }
 
-  if (authorData.length === 0) return null;
+  const authorData = await connection()
+    .then((db) => db.collection('authors').findOne(new ObjectId(id)));
 
-  // Utilizamos [0] para buscar a primeira linha, que deve ser a única no array de resultados, pois estamos buscando por ID.
-  const { firstName, middleName, lastName } = serialize(authorData[0]);
+  if (!authorData) return null;
 
-  return getNewAuthor({
-    id,
-    firstName,
-    middleName,
-    lastName,
-  });
+  const { firstName, middleName, lastName } = authorData;
+
+  return getNewAuthor({ id, firstName, middleName, lastName });
 };
 
 const isValid = (fistName, middleName, lastName) => {

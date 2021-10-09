@@ -52,22 +52,19 @@ const getBooksById = async (bookId) => {
 
 const isValid = async (title, authorId) => {
   if (!title || typeof title !== 'string' ||title.length < 4) return false;
-  if (!authorId || typeof authorId !== 'number') return false;
+  if (!authorId || typeof authorId !== 'string') return false;
 
-  const [authorIds] = await connection.execute(
-    'SELECT id FROM authors;'
-  );
+  const authorIds = await connection()
+    .then((db) => db.collection('authors').findOne(new ObjectId(authorId)))
 
-  const findAuthor = authorIds.find(({ id }) => id === authorId);
-
-  if (!findAuthor) return false;
+  if (!authorIds) return false;
 
   return true;
 };
 
-const create = async (title, author_id) => connection.execute(
-  'INSERT INTO books (title, author_id) VALUES (?, ?)',
-  [title, author_id]
+const create = async (title, authorId) => (
+  connection()
+    .then((db) => db.collection('books').insertOne({ title, authorId}))
 );
 
 module.exports = {

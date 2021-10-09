@@ -39,9 +39,28 @@ const findUserById = async (id) => (
     .then((response) => response)
 )
 
+const updateUser = async (id, firstName, lastName, email, password ) => (
+  connection()
+    .then((db) => (
+      db.collection('user')
+        .updateOne(
+          { _id: ObjectId(id) },
+          { $set: { firstName, lastName, email, password }},
+        )),
+    )
+    .then(() => ({
+      id,
+      firstName,
+      lastName,
+      email,
+      password,
+    }))
+)
+
 module.exports = {
   createUser,
   findAllEmails,
   findAllUsers,
-  findUserById
+  findUserById,
+  updateUser,
 };

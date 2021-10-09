@@ -59,4 +59,34 @@ route.get(
     };
 });
 
+route.put(
+  '/:id',
+  validName,
+  validEmail,
+  validPassword,
+  async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { firstName, lastName, email, password } = req.body;
+  
+      const foundUser = await User.findUserById(id);
+  
+      if (!foundUser) return res.status(404).json({
+        "error": true,
+        "message": "Usuário não encontrado"
+      });
+  
+      const updateUser = await User.updateUser(id, firstName, lastName, email, password);
+  
+      res.status(200).json(updateUser);
+      
+    } catch (err) {
+      res.status(404).json({
+        "error": true,
+        "message": "Usuário não encontrado",
+        "TypeError": err.message
+      });
+    };
+});
+
 module.exports = route;

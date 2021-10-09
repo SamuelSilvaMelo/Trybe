@@ -3,7 +3,7 @@ const User = require('../models/user')
 const validUniqueEmail = async (req, res, next) => {
   const { email } = req.body;
 
-  const allEmails = await User.findAllEmails(email);
+  const allEmails = await User.findAllEmails();
 
   const checkUniqueEmail = allEmails.find((user) => user.email === email)
 

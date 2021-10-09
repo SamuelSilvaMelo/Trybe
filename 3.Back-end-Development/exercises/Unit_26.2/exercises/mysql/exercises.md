@@ -103,25 +103,3 @@ O campo `_id` deve ser renomeado para `id`, pois a nomenclatura `_id` trata-se d
         "message": "Usuário não encontrado"
     }
 ```
-
-## Bônus
-
-Refatore a camada de model da aplicação criada nos exercícios anteriores para acessar o **MySQL** ao invés do **MongoDB**.
-Utilize o script SQL abaixo para criar o banco e a tabela que você precisará utilizar para realizar essa refatoração.
-
-```
-CREATE DATABASE IF NOT EXISTS users_crud;
-
-USE users_crud;
-
-CREATE TABLE users (
-    id INT NOT NULL AUTO_INCREMENT,
-    first_name VARCHAR(30) NOT NULL,
-    last_name VARCHAR(30) NOT NULL,
-    email VARCHAR(30) NOT NULL,
-    password VARCHAR(100) NOT NULL,
-    PRIMARY KEY(id)
-);
-```
-
-Pode ser interessante fazer um cópia da aplicação que desenvolveu anteriormente, assim você terá os dois códigos para consultar posteriormente.

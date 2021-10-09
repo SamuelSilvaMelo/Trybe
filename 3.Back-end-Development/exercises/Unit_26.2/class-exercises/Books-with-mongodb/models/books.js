@@ -1,4 +1,5 @@
 const connection = require('./connection');
+const { ObjectId } = require('mongodb');
 
 const serialize = ({ id, title, author_id}) => ({
   id,
@@ -31,12 +32,22 @@ const getByAuthorId = async (authorId) => {
 };
 
 const getBooksById = async (bookId) => {
-  const query = 'SELECT * FROM books WHERE id=?;'
-  const [book] = await connection.execute(query, [bookId]);
+  if (!ObjectId.isValid(bookId)) {
+    return null;
+  }
 
-  if (book.length === 0) return null;
+  const booksData = await connection()
+    .then((db) => db.collection('books').findOne(new ObjectId(bookId)));
 
-  return book.map(serialize);
+  if (!booksData) return null;
+
+  const { _id, title, author_id } = booksData;
+
+  return {
+    id: _id,
+    title,
+    authorId: author_id,
+  }
 }
 
 const isValid = async (title, authorId) => {

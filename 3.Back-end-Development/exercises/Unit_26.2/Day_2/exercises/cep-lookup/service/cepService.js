@@ -29,8 +29,24 @@ const addNewCep = async (cep, logradouro, bairro, localidade, uf) => {
   });
 };
 
+const searchNewCepData = async (newCep) => {
+  const newCepData = await dataCep.findNewCep(newCep);
+  
+  if (newCepData.erro) {
+    return ({
+      error: {
+        code: 'notFound',
+        message: 'CEP não encontrado'
+      },
+    });
+  };
+
+  return newCepData;
+}
+
 module.exports = {
   findAllCeps,
   findCep,
-  addNewCep
+  addNewCep,
+  searchNewCepData
 };

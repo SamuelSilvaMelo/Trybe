@@ -11,7 +11,20 @@ const findCep = async (req, res, next) => {
   
   const { error, searchedCep } = await dataCep.findCep(cep);
 
-  if (error) return next({ error })
+  if (error) {
+    const {
+      error,
+      logradouro,
+      bairro,
+      localidade,
+      uf } = await dataCep.searchNewCepData(cep);
+    
+    if (error) return next({ error })
+
+    const newCep = await dataCep.addNewCep(cep, logradouro, bairro, localidade, uf);
+
+    res.status(201).json(newCep);
+  }
 
   res.status(200).json(searchedCep);
 };

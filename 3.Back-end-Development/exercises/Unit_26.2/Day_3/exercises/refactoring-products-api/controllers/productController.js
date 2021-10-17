@@ -1,40 +1,71 @@
 const express = require('express');
 const ProductModel = require('../models/productModel');
+const { validateNewProductParams } = require('../middlewares/validateNewProduct');
 
 const router = express.Router();
 
-router.get('/list-products', async (req, res, next) => {
+router.get('/', async (_req, res) => {
   const products = await ProductModel.getAll();
 
-  res.send(products);
+  res.status(200).json(products);
 });
 
-router.get('/get-by-id/:id', async (req, res, next) => {
-  const product = await ProductModel.getById(req.params.id);
+router.get('/:id', async (req, res) => {
+  const { id } = req.params;
 
-  res.send(product);
+  const product = await ProductModel.getById(id);
+
+  if (!product) return res.status(404).json({ message: 'Produto não encontrado' });
+
+  res.status(200).json(product);
 });
 
-router.post('/add-user', async (req, res) => {
+router.post(
+  '/',
+  validateNewProductParams,
+  async (req, res) => {
   const { name, brand } = req.body;
 
-  const newProduct = await ProductModel.add(name, brand);
-
-  res.send(newProduct);
+  try {
+    const newProduct = await ProductModel.add(name, brand);
+    
+    return res.status(201).json(newProduct);
+  } catch {
+    return res.status(500).json({
+      message: 'Ocorreu um erro. Não foi possível adicionar o novo produto'
+    });
+  }
 });
 
-router.post('/delete-user/:id', async (req, res) => {
-  const products = await ProductModel.exclude(req.params.id);
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
 
-  res.send(products);
+  try {
+    const products = await ProductModel.exclude(id);
+  
+    return res.status(200).json(products);
+  } catch {
+    return res.status(500).json({
+      message: 'Ocorreu um erro. Não foi possível apagar o produto'
+    });
+  }
 });
 
-router.post('/update-user/:id', async (req, res) => {
+router.put(
+  '/:id',
+  validateNewProductParams,
+  async (req, res) => {
   const { name, brand } = req.body;
 
-  const products = await ProductModel.update(req.params.id, name, brand);
-
-  res.send(products);
+  try {
+    const products = await ProductModel.update(req.params.id, name, brand);
+  
+    return res.status(200).json(products);
+  } catch {
+    return res.status(500).json({
+      message: 'Ocorreu um erro. Não foi possível atualizar o produto'
+    });
+  }
 });
 
 module.exports = router;

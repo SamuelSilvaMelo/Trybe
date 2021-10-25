@@ -18,10 +18,11 @@ app.use(
   }),
 );
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/ping', controllers.ping);
+app.post('/login', middlewares.validateLogin, controllers.login);
 
 app.use(middlewares.error);
 

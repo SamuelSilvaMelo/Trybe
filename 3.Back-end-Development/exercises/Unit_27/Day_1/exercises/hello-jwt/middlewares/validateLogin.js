@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const validateLogin = (req, res, next) => {
+const validateLogin = (req, _res, next) => {
   const { error } = Joi.object({
     username: Joi
       .string()
@@ -13,8 +13,8 @@ const validateLogin = (req, res, next) => {
       .required(),
   }).validate(req.body);
 
-  if (error) next(error);
-
+  if (error) return next(error);
+  
   next();
 };
 

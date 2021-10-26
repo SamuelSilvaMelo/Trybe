@@ -61,11 +61,11 @@
 - [X] 26.2.2: _Software Architecture - Controller and Service Layer_
 - [X] 26.2.3: _Web Architecture - Rest and Restful_
 - [ ] 26.2.4: _Software Architecture - Testing the Layers_
-- [ ] 26.2.5: [_Project - Store Manager_]()
+- [X] 26.2.5: [_Project - Store Manager_](https://github.com/tryber/sd-011-store-manager/pull/18)
 
 #### Unit 27: Authentication and File Upload :hourglass_flowing_sand:
 
-- [ ] 27.1: _NodeJS - JWT - (JSON Web Token)_
+- [X] 27.1: _NodeJS - JWT - (JSON Web Token)_
 - [ ] 27.2: _NodeJS - Uploading files with 'mutter'_
 - [ ] 27.3: _NodeJS - Testing APIs with Integration Tests_
 - [ ] 27.4: [_Project - Cookmaster_]()

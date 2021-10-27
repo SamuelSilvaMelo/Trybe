@@ -10,7 +10,10 @@ const storage = multer.diskStorage({
   filename: (_req, file, callback) => callback(null, file.originalname),
 });
 
-/* https://github.com/expressjs/multer/issues/114 */
+/*
+  How to validate by extension?
+  https://github.com/expressjs/multer/issues/114
+*/
 
 const upload = multer({
   storage,
@@ -56,6 +59,9 @@ app.use(
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+/* Made with the help of the template */
+app.use(express.static(`${__dirname}/uploads`));
 
 app.get('/ping', controllers.ping);
 

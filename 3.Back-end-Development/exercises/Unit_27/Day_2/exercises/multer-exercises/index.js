@@ -37,6 +37,11 @@ app.post(
   controllers.createProfile,
 );
 
+app.get(
+  '/profiles/:id',
+  controllers.findProfile,
+);
+
 app.use(middlewares.error);
 
 app.listen(PORT, () => {

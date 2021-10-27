@@ -46,7 +46,10 @@ const uploadFiles = multer({
   storage: multiFilesStorage,
 });
 
+const uploadProfilePicture = multer({ dest: 'uploads/profilePics' });
+
 module.exports = {
   uploadFile,
   uploadFiles,
+  uploadProfilePicture,
 };

@@ -30,6 +30,13 @@ app.post('/upload', middlewares.uploadFile.single('file'), controllers.upload);
 
 app.post('/multiple', middlewares.uploadFiles.array('files'), controllers.multipleUpload);
 
+app.post(
+  '/profile',
+  middlewares.uploadProfilePicture.single('profilePic'),
+  middlewares.validateProfile,
+  controllers.createProfile,
+);
+
 app.use(middlewares.error);
 
 app.listen(PORT, () => {

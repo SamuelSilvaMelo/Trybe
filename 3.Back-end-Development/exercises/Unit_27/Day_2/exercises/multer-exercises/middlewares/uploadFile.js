@@ -1,9 +1,13 @@
 const multer = require('multer');
 const fs = require('fs');
 
-const storage = multer.diskStorage({
+const singleFileStorage = multer.diskStorage({
   destination: (_req, _file, callback) => callback(null, 'uploads/'),
   filename: (_req, file, callback) => callback(null, `${Date.now()}-${file.originalname}`),
+});
+
+const multiFilesStorage = multer.diskStorage({
+  destination: (req, file, callback) => callback(null, 'uploads/'),
 });
 
 /*
@@ -12,7 +16,7 @@ const storage = multer.diskStorage({
 */
 
 const uploadFile = multer({
-  storage,
+  storage: singleFileStorage,
   fileFilter: (_req, file, callback) => {
     if (!file.originalname.includes('.png')) {
       const error = {
@@ -38,4 +42,11 @@ const uploadFile = multer({
   },
 });
 
-module.exports = uploadFile;
+const uploadFiles = multer({
+  storage: multiFilesStorage,
+});
+
+module.exports = {
+  uploadFile,
+  uploadFiles,
+};

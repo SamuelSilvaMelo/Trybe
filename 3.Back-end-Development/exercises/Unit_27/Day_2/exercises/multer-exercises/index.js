@@ -28,6 +28,8 @@ app.get('/ping', controllers.ping);
 
 app.post('/upload', middlewares.uploadFile.single('file'), controllers.upload);
 
+app.post('/multiple', middlewares.uploadFiles.array('files'), controllers.multipleUpload);
+
 app.use(middlewares.error);
 
 app.listen(PORT, () => {

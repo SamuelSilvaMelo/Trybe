@@ -3,13 +3,13 @@ const express = require('express');
 
 const app = express();
 
-const { PORT } = process.env;
+const { PORT, MESSAGE } = process.env;
 
 
 app.get(
   '/',
   (_req, res) => {
-    res.send('Está vivo!!!')
+    res.send(MESSAGE)
   },
 );
 

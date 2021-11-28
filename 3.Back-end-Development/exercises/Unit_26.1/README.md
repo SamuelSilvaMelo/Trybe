@@ -1,4 +1,4 @@
-#### Unit 26.1: Introduction to Web Development with NodeJS :hourglass_flowing_sand:
+#### Unit 26.1: Introduction to Web Development with NodeJS :heavy_check_mark:
 
 - [X] 26.1.1: _Intro - NodeJS_
 - [X] 26.1.1: _Node.js - Introduction_

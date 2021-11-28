@@ -44,7 +44,7 @@
 - [X] 25.1: _Aggregation Framework - Part 2_
 - [X] 25.1: [_Project - Aggregations_](https://github.com/tryber/sd-011-mongodb-aggregations/pull/99)
 
-#### Unit 26.1: Introduction to Web Development with NodeJS :hourglass_flowing_sand:
+#### Unit 26.1: Introduction to Web Development with NodeJS :heavy_check_mark:
 
 - [X] 26.1.1: _Intro - NodeJS_
 - [X] 26.1.1: _Node.js - Introduction_
@@ -54,7 +54,7 @@
 - [X] 26.1.5: _Practicing Express_
 - [X] 26.1.6: [_Project - Talker Manager_](https://github.com/tryber/sd-011-project-talker-manager/pull/6)
 
-#### Unit 26.2: Service Layer and Architecture Rest and Restful :hourglass_flowing_sand:
+#### Unit 26.2: Service Layer and Architecture Rest and Restful :heavy_check_mark:
 
 - [X] 26.2.1: _Introduction - Software Architecture_
 - [X] 26.2.1: _Software Architecture - Model Layer_
@@ -63,24 +63,24 @@
 - [ ] 26.2.4: _Software Architecture - Testing the Layers_
 - [X] 26.2.5: [_Project - Store Manager_](https://github.com/tryber/sd-011-store-manager/pull/18)
 
-#### Unit 27: Authentication and File Upload :hourglass_flowing_sand:
+#### Unit 27: Authentication and File Upload :heavy_check_mark:
 
 - [X] 27.1: _NodeJS - JWT - (JSON Web Token)_
 - [X] 27.2: _NodeJS - Uploading files with 'mutter'_
 - [ ] 27.3: _NodeJS - Testing APIs with Integration Tests_
-- [ ] 27.4: [_Project - Cookmaster_]()
+- [X] 27.4: [_Project - Cookmaster_](https://github.com/tryber/sd-011-cookmaster/pull/2)
 
-#### Unit 28: Deployment :hourglass_flowing_sand:
+#### Unit 28: Deployment :heavy_check_mark:
 
-- [ ] 28.1: _Introduction - Deploy_
-- [ ] 28.1: _Infrastructure - Deploy with Heroku_
+- [X] 28.1: _Introduction - Deploy_
+- [X] 28.1: _Infrastructure - Deploy with Heroku_
 - [ ] 28.2: _Deploy - Process Managers_
-- [ ] 28.3: [_Project - Stranger Things_]()
+- [X] 28.3: [_Project - Stranger Things-Frontend_](https://github.com/tryber/sd-011-stranger-things-frontend/pull/103) / [_Project - Stranger Things-Backend](https://github.com/tryber/sd-011-stranger-things-backend/pull/107)
 
 #### Unit 29: Architecture: SOLID and ORM :hourglass_flowing_sand:
 
-- [ ] 29.1: _Architecture - SOLID Principles_
-- [ ] 29.2: _ORM - Application interface with the database_
+- [X] 29.1: _Architecture - SOLID Principles_
+- [X] 29.2: _ORM - Application interface with the database_
 - [ ] 29.3: _ORM - Associations_
 - [ ] 29.4: [_Project - Blogs API_]()
 

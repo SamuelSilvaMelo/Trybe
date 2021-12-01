@@ -1,13 +1,45 @@
 const JokesModels = require('../models/JokesModel');
 
 const getJokesCategories = async (_req, res) => {
-  const categories = await JokesModels.getJokesCategories();
+  try {
+    const categories = await JokesModels.getJokesCategories();
+  
+    return res.render('categories/index', { categories });
+  } catch (error) {
+    console.log(error);
 
-  console.log('ENTREI NO GETJOKES')
-
-  res.render('categories/index', { categories });
+    return res.render('notFound/404');
+  }
 };
 
+const getJokeByCategory = async (req, res) => {
+  try {
+    const { category } = req.params;
+  
+    const joke = await JokesModels.getJokeByCategory(category);
+  
+    res.render('categories/joke', { joke, category });
+  } catch (error) {
+    console.log(error);
+
+    return res.render('notFound/404');
+  }
+}
+
+const getRandomJoke = async (_req, res) => {
+  try {
+    const joke = await JokesModels.getRandomJoke();
+
+    res.render('randomJoke/index', { joke })
+  } catch (error) {
+    console.log(error);
+
+    return res.render('notFound/404');
+  }
+}
+
 module.exports = {
-  getJokesCategories
+  getJokesCategories,
+  getJokeByCategory,
+  getRandomJoke
 };

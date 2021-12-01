@@ -8,6 +8,10 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.get('/', (_req, res) => res.redirect('/categories'));
+
+app.get('/jokes', JokesController.getRandomJoke);
+
 app.get('/categories', JokesController.getJokesCategories);
+app.get('/jokes/:category', JokesController.getJokeByCategory);
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));

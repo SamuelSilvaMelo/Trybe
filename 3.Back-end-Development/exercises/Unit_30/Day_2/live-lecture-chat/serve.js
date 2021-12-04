@@ -1,4 +1,3 @@
-const { Socket } = require('dgram');
 const net = require('net');
 
 const PORT = 2708;
@@ -33,7 +32,7 @@ const server = net.createServer((socket) => {
   });
 
   socket.write('Bem vindo ao chat \n');
-  console.log(sockets.map((e) => e.name))
+  // console.log(sockets.map((e) => e.name))
 });
 
 server.listen(PORT, () => console.log(`Servidor está on na porta ${PORT}`));

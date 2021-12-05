@@ -20,9 +20,14 @@ app.use(express.static(__dirname + '/public'));
 const io = require('socket.io')(http, options);
 
 require('./sockets/ping')(io);
+require('./sockets/chat')(io);
 
-app.get('/', (req, res) => {
+app.get('/ping', (_req, res) => {
   res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/chat', (_req, res) => {
+  res.sendFile(__dirname + '/public/chat.html');
 });
 
 http.listen(3000, () => {

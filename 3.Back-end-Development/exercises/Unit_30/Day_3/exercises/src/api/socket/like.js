@@ -5,7 +5,7 @@ module.exports = (io) => {
     socket.on('likePost', () => {
       likes += 1;
 
-      socket.emit('updateLikes', likes);
+      io.emit('updateLikes', likes);
     });
   });
 };

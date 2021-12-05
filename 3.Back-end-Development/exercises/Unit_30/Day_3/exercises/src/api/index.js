@@ -16,9 +16,11 @@ app.use(express.static(__dirname + '/../public'));
 
 const io = require('socket.io')(http, options);
 
+require('./socket/like')(io);
+
 app.get(
   '/',
   (_req, res) => res.sendFile(__dirname + '/../public/')
 );
 
-app.listen(3000, () => console.log(`Running on PORT: ${PORT}`));
+http.listen(3000, () => console.log(`Running on PORT: ${PORT}`));

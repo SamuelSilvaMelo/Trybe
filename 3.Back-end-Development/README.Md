@@ -1,4 +1,4 @@
-# Back-end Development :hourglass_flowing_sand:
+# Back-end Development :heavy_check_mark:
 
 #### Unit 20: Introduction to SQL :heavy_check_mark:
 
@@ -8,7 +8,7 @@
 - [X] 20.2: _Finding data in a database_
 - [X] 20.3: _Filtering data specifically_
 - [X] 20.4: _Manipulating tables_
-- [X] 19.5: [_Project - All For One_](https://github.com/tryber/sd-011-project-mysql-all-for-one/tree/SamuelSilvaMelo-mysql-all-for-one)
+- [X] 20.5: [_Project - All For One_](https://github.com/tryber/sd-011-project-mysql-all-for-one/tree/SamuelSilvaMelo-mysql-all-for-one)
 
 #### Unit 21: SQL Functions, Joins and Subqueries :heavy_check_mark:
 
@@ -84,14 +84,14 @@
 - [X] 29.3: _ORM - Associations_
 - [X] 29.4: [_Project - Blogs API_](https://github.com/tryber/sd-011-project-blogs-api/pull/125)
 
-#### Unit 30: Sockets :hourglass_flowing_sand:
+#### Unit 30: Sockets :heavy_check_mark:
 
 - [X] 30.1: _Software Architecture - View Layer_
 - [X] 30.2: _Sockets - TCP/UDP & NET_
 - [X] 30.3: _Sockets - Socket.io_
-- [ ] 30.4: _Sockets - Practicing Socket.io_
-- [ ] 30.5: [_Project - Webchat_]()
+- [X] 30.4: _Sockets - Practicing Socket.io_
+- [X] 30.5: [_Project - Webchat_](https://github.com/tryber/sd-011-project-webchat/pull/5)
 
-#### Unit 31: Project - Delivery App :hourglass_flowing_sand:
+#### Unit 31: Project - Delivery App :heavy_check_mark:
 
-- [ ] 31.1: [_Project - Delivery App_]()
+- [X] 31.1: [_Project - Delivery App_]()

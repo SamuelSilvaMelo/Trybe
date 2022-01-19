@@ -19,8 +19,8 @@ To check the blocks of content enter the respective folders.
 ## Front-end Development :heavy_check_mark:
 To check the blocks of content enter the respective folders.
 
-## Back-end Development :hourglass_flowing_sand:
+## Back-end Development :heavy_check_mark:
 To check the blocks of content enter the respective folders.
 
-## Computer Science :closed_book:
+## Computer Science :hourglass_flowing_sand:
 To check the blocks of content enter the respective folders.

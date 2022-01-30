@@ -15,6 +15,3 @@ def Fizz_Buzz(n):
             response.append(number)
 
     return response
-
-
-print(Fizz_Buzz(1))

@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 import json
+import csv
 
 
 class SalesReport(ABC):
@@ -27,3 +28,12 @@ class SalesReportJSON(SalesReport):
     def serialize(self):
         with open(self.export_file + '.json', 'w') as file:
             json.dump(self.build(), file)
+
+
+class SalesReportCSV(SalesReport):
+    def serialize(self):
+        with open(self.export_file + '.csv', 'w') as file:
+            headers = ['Coluna 1', 'Coluna 2', 'Coluna 3']
+            writer = csv.DictWriter(file, fieldnames=headers)
+            writer.writeheader()
+            writer.writerows(self.build())

@@ -23,11 +23,18 @@ class SalesReport(ABC):
     def serialize(self):
         raise NotImplementedError
 
+    @abstractmethod
+    def get_len(self):
+        return len(self.build())
+
 
 class SalesReportJSON(SalesReport):
     def serialize(self):
         with open(self.export_file + '.json', 'w') as file:
             json.dump(self.build(), file)
+
+    def get_len(self):
+        return super().get_len()
 
 
 class SalesReportCSV(SalesReport):
@@ -37,3 +44,6 @@ class SalesReportCSV(SalesReport):
             writer = csv.DictWriter(file, fieldnames=headers)
             writer.writeheader()
             writer.writerows(self.build())
+
+    def get_len(self):
+        return super().get_len()

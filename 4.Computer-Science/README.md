@@ -8,12 +8,12 @@
 - [X] 32.3: _Tests_
 - [X] 32.4: [_Project - Job Insights_](https://github.com/tryber/sd-011-project-job-insights/pulls/SamuelSilvaMelo)
 
-#### Unit 33: Object-Oriented Programming and Design Patterns :hourglass_flowing_sand:
+#### Unit 33: Object-Oriented Programming and Design Patterns :heavy_check_mark:
 
 - [X] 33.1: _Introduction to object-oriented programming_
 - [X] 33.2: _Inheritance, Composition and Interfaces_
-- [ ] 33.3: _Design Patterns_
-- [ ] 33.4: [_Project - Inventory Reports_]()
+- [X] 33.3: _Design Patterns_
+- [X] 33.4: [_Project - Inventory Reports_]()
 
 #### Unit 34: Networks and Data Scraping :hourglass_flowing_sand:
 
@@ -37,7 +37,7 @@
 - [ ] 36.4: _Set_
 - [ ] 36.5: [_Project - Restaurant Orders_]()
 
-#### Unit 37: Data Structure II: Lists, Queues and Stacks :heavy_check_mark:
+#### Unit 37: Data Structure II: Lists, Queues and Stacks :hourglass_flowing_sand:
 
 - [ ] 37.1: _Node and Linked Lists_
 - [ ] 37.1: _Stacks and Queues_

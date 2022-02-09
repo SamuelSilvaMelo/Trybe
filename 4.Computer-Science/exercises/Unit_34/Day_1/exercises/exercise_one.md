@@ -4,14 +4,14 @@ Caso tenha dificuldades maiores, você pode utilizar o Postman para converter um
 
 1. Faça uma chamada GET, utilizando o cURL.
 
-    ```shell
+    ```bash
     curl --request GET \
       --url https://blog.betrybe.com/
     ```
 
 2. Faça uma chamada POST, utilizando o cURL, passando um JSON no body da requisição.
 
-    ```shell
+    ```bash
     curl --request POST \
       --url https://blog.betrybe.com/ \
       --data '{
@@ -21,7 +21,7 @@ Caso tenha dificuldades maiores, você pode utilizar o Postman para converter um
 
 3. Faça uma chamada qualquer, utilizando o cURL, passando um header na requisição.
 
-    ```shell
+    ```bash
     curl --request POST \
       --url https://blog.betrybe.com/ \
       --header 'Content-Type: application/json' \

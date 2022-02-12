@@ -1,4 +1,3 @@
-from http.client import responses
 from parsel import Selector
 import requests
 

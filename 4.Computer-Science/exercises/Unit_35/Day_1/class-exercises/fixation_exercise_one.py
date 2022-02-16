@@ -8,5 +8,5 @@ def multiply_array(numbers):
 
     return result
 
-# Complexidade de Tempo: O(n)
-# Complexidade de Espaço: O(1)
+# Complexidade de Tempo: O(n) - Quanto maior o input maior será o laço e consequentemente maior o tempo (linear).
+# Complexidade de Espaço: O(1) - Independente do input sempre será alocado em memória UM número.

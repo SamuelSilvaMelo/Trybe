@@ -13,18 +13,18 @@
 - [X] 33.1: _Introduction to object-oriented programming_
 - [X] 33.2: _Inheritance, Composition and Interfaces_
 - [X] 33.3: _Design Patterns_
-- [X] 33.4: [_Project - Inventory Reports_]()
+- [X] 33.4: [_Project - Inventory Reports_](https://github.com/tryber/sd-011-inventory-report/pull/245)
 
-#### Unit 34: Networks and Data Scraping :hourglass_flowing_sand:
+#### Unit 34: Networks and Data Scraping :heavy_check_mark:
 
 - [X] 34.1: _Network architecture_
 - [X] 34.2: _Computer networks, tools and security_
 - [X] 34.3: _Data Scraping_
-- [ ] 34.4: [_Project - Tech news_]()
+- [X] 34.4: [_Project - Tech news_](https://github.com/tryber/sd-011-tech-news/pull/72)
 
 #### Unit 35: Algorithms :hourglass_flowing_sand:
 
-- [ ] 35.1: _Complexity of Algorithms_
+- [X] 35.1: _Complexity of Algorithms_
 - [ ] 35.2: _Recursion and Problem Solving Strategies_
 - [ ] 35.3: _Sorting and Searching Algorithms_
 - [ ] 35.4: [_Project - Algorithms_]()

@@ -22,4 +22,13 @@ def fibonacci(n):
           fibonacci_numbers[len(fibonacci_numbers) - 1]
         )
 
-    return fibonacci_numbers
+    return fibonacci_numbers[n]
+
+
+# EXEMPLO SOLUÇÃO RECURSIVA:
+
+# def fibonacci(n):
+#     if n < 2:
+#         return n
+#     else:
+#         return fibonacci(n-1) + fibonacci(n-2)

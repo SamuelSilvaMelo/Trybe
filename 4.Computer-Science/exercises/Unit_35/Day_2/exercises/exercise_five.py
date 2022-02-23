@@ -16,5 +16,4 @@ def isPrime(number, counter):
     return isPrime(number, counter - 1)
 
 
-for number in range(100):
-    print(f'O número {number} é primo? - {isPrime(number, number - 1)}')
+print(isPrime(997, 996))

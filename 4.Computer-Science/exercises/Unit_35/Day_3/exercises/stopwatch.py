@@ -15,8 +15,8 @@ class Stopwatch:
 
 # Para utilizar o Cronometro , basta usá-lo dentro de um with e em seguida chamar a função:
 
-# from Cronometro import Cronometro
+# from Stopwatch import Stopwatch
 
 
-# with Cronometro("algoritmo"):
+# with Stopwatch("algoritmo"):
 #     algoritmo(...)

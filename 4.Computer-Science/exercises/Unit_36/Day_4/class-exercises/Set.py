@@ -8,9 +8,23 @@ class Conjunto:
 
         self._set[item] = True
 
+    def __str__(self):
+        result = "{"
+
+        for index, value in enumerate(self._set):
+            if value is not False:
+                if result == "{":
+                    result += f"{index}"
+                else:
+                    result += ", " + f"{index}"
+
+        return result + "}"
+
 
 if __name__ == "__main__":
     conjunto = Conjunto()
 
     for number in [0, 10, 100, 1000]:
         conjunto.add(number)
+
+    print(conjunto)

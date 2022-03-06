@@ -20,6 +20,9 @@ class Conjunto:
 
         return result + "}"
 
+    def __contains__(self, item):
+        return (self._set[item] is True)
+
 
 if __name__ == "__main__":
     conjunto = Conjunto()
@@ -28,3 +31,5 @@ if __name__ == "__main__":
         conjunto.add(number)
 
     print(conjunto)
+    print(10 in conjunto)
+    print(50 in conjunto)

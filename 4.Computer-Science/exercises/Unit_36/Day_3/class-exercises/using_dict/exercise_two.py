@@ -1,4 +1,4 @@
-# Exercício 6: Dada uma string, construa um dicionário com a contagem de cada caractere da palavra. Utilize o pseudocódigo e o exemplo abaixo para se nortear.
+# Exercício 2: Dada uma string, construa um dicionário com a contagem de cada caractere da palavra. Utilize o pseudocódigo e o exemplo abaixo para se nortear.
 #
 # Para cada char na string:
 #     - Se o char não estiver no dicionário, inclua com o valor 1;

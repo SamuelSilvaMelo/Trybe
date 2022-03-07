@@ -71,3 +71,24 @@ Caso queiramos saber se um elemento faz parte ou não do conjunto usando o opera
 
 - Na `main`, instancie dois objetos do tipo `Conjunto`. Preencha o primeiro com os valores de **1 a 10**, e o segundo, com valores de **10 a 20**;
 - Imprima na tela a união dos dois conjuntos.
+
+## Exercício 5: Intersecção - Todos os elementos que estão em A E em B
+
+- Crie um método com a assinatura abaixo, que recebe como parâmetro outro objeto da classe `Conjunto`:
+
+  ```
+  def intersection(self, conjuntoB):
+      # retorno: outro objeto Conjunto com intersecção do próprio objeto com o conjuntoB
+  ```
+
+- Exemplos de entrada e saída:
+
+  ```
+  A = {1, 2, 3}
+  B = {3, 4, 5}
+  # saída: {3}
+
+  C = {0, 3, 6, 9}
+  B = {12, 15, 18}
+  # saída: {}
+  ```

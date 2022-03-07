@@ -43,14 +43,14 @@ Caso queiramos saber se um elemento faz parte ou não do conjunto usando o opera
 
 - Crie um método com a assinatura abaixo:
 
-  ```
+  ```py
   def __contains__(self, item):
       # retorno: True, caso o elemento faça parte. False, caso o elemento não faça parte.
   ```
 
 - Exemplos de entrada e saída:
 
-  ```
+  ```py
   A = {1, 2, 3}
 
   # entrada: 1
@@ -59,3 +59,15 @@ Caso queiramos saber se um elemento faz parte ou não do conjunto usando o opera
   # entrada: 0
   # saída: False
   ```
+
+## Exercício 4: União - Todos os elementos que estão em A OU em B
+
+- Crie um método com a assinatura abaixo, que recebe como parâmetro outro objeto da classe `Conjunto`:
+
+  ```py
+  def union(self, conjuntoB):
+      # retorno: outro objeto Conjunto com união do próprio objeto com o conjuntoB
+  ```
+
+- Na `main`, instancie dois objetos do tipo `Conjunto`. Preencha o primeiro com os valores de **1 a 10**, e o segundo, com valores de **10 a 20**;
+- Imprima na tela a união dos dois conjuntos.

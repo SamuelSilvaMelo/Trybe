@@ -23,6 +23,16 @@ class Conjunto:
     def __contains__(self, item):
         return (self._set[item] is True)
 
+    # Feito com auxílio do gabarito
+    def union(self, conjuntoB):
+        new_conjunto = Conjunto()
+
+        for index in range(1001):
+            if self._set[index] or conjuntoB._set[index]:
+                new_conjunto.add(index)
+
+        return new_conjunto
+
 
 if __name__ == "__main__":
     conjunto = Conjunto()
@@ -33,3 +43,14 @@ if __name__ == "__main__":
     print(conjunto)
     print(10 in conjunto)
     print(50 in conjunto)
+
+    conjunto_1 = Conjunto()
+    for index in range(1, 11):
+        conjunto_1.add(index)
+
+    conjunto_2 = Conjunto()
+    for index in range(10, 21):
+        conjunto_2.add(index)
+
+    conjunto_3 = conjunto_1.union(conjunto_2)
+    print(conjunto_3)

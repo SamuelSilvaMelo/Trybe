@@ -90,7 +90,7 @@ class LinkedList:
         if value_returned.next:
             value_returned.next = None
 
-        return self.__get_node_at(position)
+        return value_returned
 
     def is_empty(self):
         return not self.__length
@@ -99,3 +99,20 @@ class LinkedList:
         if self.head_value:
             self.head_value = None
             self.__length = 0
+
+    def index_of(self, value):
+        current_value = self.head_value
+        current_index = 0
+
+        if not self.head_value:
+            return None
+
+        while current_index < self.__length:
+            if current_value.value != value:
+                current_index += 1
+            else:
+                return current_index
+
+            current_value = current_value.next
+
+        return -1

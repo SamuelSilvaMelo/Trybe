@@ -2,7 +2,6 @@ from node import Node
 
 
 class LinkedList:
-
     def __init__(self):
         self.head_value = None
         self.__length = 0
@@ -104,9 +103,6 @@ class LinkedList:
         current_value = self.head_value
         current_index = 0
 
-        if not self.head_value:
-            return None
-
         while current_index < self.__length:
             if current_value.value != value:
                 current_index += 1
@@ -116,3 +112,17 @@ class LinkedList:
             current_value = current_value.next
 
         return -1
+
+    def delete_duplicates(self):
+        list_with_unique_elements = LinkedList()
+        counter = self.__length
+        current_value = self.head_value
+
+        while counter >= 1:
+            if list_with_unique_elements.index_of(current_value.value) == -1:
+                list_with_unique_elements.insert_last(current_value.value)
+
+            current_value = current_value.next
+            counter -= 1
+
+        return list_with_unique_elements

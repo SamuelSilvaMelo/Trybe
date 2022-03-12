@@ -1,6 +1,6 @@
 class Stack():
     def __init__(self):
-        self._data: list()
+        self._data = list()
 
     def size(self):
         return len(self._data)
@@ -17,7 +17,7 @@ class Stack():
 
         # -1 se refere ao último objeto da pilha,
         # ou seja, o valor do topo da pilha
-        value = self.data[-1]
+        value = self._data[-1]
         del self._data[-1]
         return value
 

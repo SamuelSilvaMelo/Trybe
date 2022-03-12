@@ -43,6 +43,12 @@ class Stack():
 
         return "Stack(" + str_items + ")"
 
+    def min_value(self):
+        if self.is_empty():
+            return None
+
+        return min(self._data)
+
 
 if __name__ == "__main__":
     elements = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -70,3 +76,10 @@ if __name__ == "__main__":
     print(content_stack.clear())
     # saída: 0
     print(content_stack.size())
+
+    for elem in elements:
+        content_stack.push(elem)
+
+    print(content_stack)
+
+    print(content_stack.min_value())

@@ -1,6 +1,7 @@
 class Stack():
-    def __init__(self):
+    def __init__(self, max_value=2):
         self._data = list()
+        self._max_value = max_value
 
     def size(self):
         return len(self._data)
@@ -9,7 +10,10 @@ class Stack():
         return not bool(self.size())
 
     def push(self, value):
-        self._data.append(value)
+        if self.size() < self._max_value:
+            self._data.append(value)
+        else:
+            raise Exception("Não é possível adicionar outro item à pilha")
 
     def pop(self):
         if self.is_empty():

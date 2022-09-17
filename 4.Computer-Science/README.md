@@ -1,4 +1,4 @@
-# Computer Science :hourglass_flowing_sand:
+# Computer Science :heavy_check_mark:
 
 #### Unit 32: Introduction to Python :heavy_check_mark:
 

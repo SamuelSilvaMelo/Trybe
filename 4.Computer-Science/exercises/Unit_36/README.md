@@ -1,4 +1,4 @@
-#### Unit 36: Data Structure I: Arrays, Hashmaps and Sets :hourglass_flowing_sand:
+#### Unit 36: Data Structure I: Arrays, Hashmaps and Sets :heavy_check_mark:
 
 - [X] 36.1: _Computer Architecture_
 - [X] 36.2: _Arrays_

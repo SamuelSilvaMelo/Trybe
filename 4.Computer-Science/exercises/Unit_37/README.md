@@ -1,5 +1,5 @@
-#### Unit 37: Data Structure II: Lists, Queues and Stacks :hourglass_flowing_sand:
+#### Unit 37: Data Structure II: Lists, Queues and Stacks :heavy_check_mark:
 
-- [ ] 37.1: _Node and Linked Lists_
-- [ ] 37.1: _Stacks and Queues_
-- [ ] 37.1: [_Project - TING - Trybe Is Not Google_]()
+- [X] 37.1: _Node and Linked Lists_
+- [X] 37.1: _Stacks and Queues_
+- [X] 37.1: [_Project - TING - Trybe Is Not Google_]()

@@ -29,16 +29,16 @@
 - [X] 35.3: _Sorting and Searching Algorithms_
 - [X] 35.4: [_Project - Algorithms_](https://github.com/tryber/sd-011-project-algorithms/pull/60)
 
-#### Unit 36: Data Structure I: Arrays, Hashmaps and Sets :hourglass_flowing_sand:
+#### Unit 36: Data Structure I: Arrays, Hashmaps and Sets :heavy_check_mark:
 
 - [X] 36.1: _Computer Architecture_
 - [X] 36.2: _Arrays_
-- [ ] 36.3: _Hashmap and Dict_
-- [ ] 36.4: _Set_
-- [ ] 36.5: [_Project - Restaurant Orders_]()
+- [X] 36.3: _Hashmap and Dict_
+- [X] 36.4: _Set_
+- [X] 36.5: [_Project - Restaurant Orders_](https://github.com/tryber/sd-011-restaurant-orders/pull/70)
 
-#### Unit 37: Data Structure II: Lists, Queues and Stacks :hourglass_flowing_sand:
+#### Unit 37: Data Structure II: Lists, Queues and Stacks :heavy_check_mark:
 
-- [ ] 37.1: _Node and Linked Lists_
-- [ ] 37.1: _Stacks and Queues_
-- [ ] 37.1: [_Project - TING - Trybe Is Not Google_]()
+- [X] 37.1: _Node and Linked Lists_
+- [X] 37.2: _Stacks and Queues_
+- [X] 37.3: [_Project - TING - Trybe Is Not Google_](https://github.com/tryber/sd-011-project-ting/pull/4)
